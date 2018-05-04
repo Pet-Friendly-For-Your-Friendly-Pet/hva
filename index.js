@@ -1,4 +1,10 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
+const keys = require("./config/keys");
+require("./models/Transactions");
+
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
