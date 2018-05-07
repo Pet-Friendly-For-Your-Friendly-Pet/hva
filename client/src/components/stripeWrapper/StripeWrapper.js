@@ -7,10 +7,10 @@ class StripeWrapper extends Component {
       <StripeCheckout
         amount={500}
         token={token => console.log(token)}
-        stripeKey={REACT_APP_STRIPE_KEY}
+        stripeKey={process.env.REACT_APP_STRIPE_KEY}
       />
     );
   }
 }
 
-export default Payments;
+export default StripeWrapper;
