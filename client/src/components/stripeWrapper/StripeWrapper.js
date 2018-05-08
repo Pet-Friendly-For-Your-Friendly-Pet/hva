@@ -3,6 +3,8 @@ import StripeCheckout from "react-stripe-checkout";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
+import classes from "./StripeWrapper.css";
+
 class StripeWrapper extends Component {
   render() {
     return (
@@ -13,7 +15,7 @@ class StripeWrapper extends Component {
         token={token => this.props.handleToken(token)}
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >
-        <button>Checkout</button>
+        <button className={classes.checkoutBtn}>Checkout</button>
       </StripeCheckout>
     );
   }
