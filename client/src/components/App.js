@@ -7,6 +7,9 @@ const Landing = () => <h2>Landing</h2>;
 const About = () => <h2>About</h2>;
 
 class App extends Component {
+  state = {
+    
+  }
   render() {
     return (
       <div>
