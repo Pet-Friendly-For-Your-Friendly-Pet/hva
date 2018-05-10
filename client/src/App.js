@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Layout from "./Layout/Layout";
+import Layout from "./components/Layout/Layout";
+import Booking from "./containers/Booking/Booking";
 
 class App extends Component {
   state = {};
@@ -9,7 +10,7 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <Layout>
-            <p>test</p>
+            <Booking />
           </Layout>
         </BrowserRouter>
       </div>
