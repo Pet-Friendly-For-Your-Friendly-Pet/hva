@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classes from "./Booking.css";
 
-import AuxWrapper from "./../../hoc/AuxWrapper";
+import AuxWrapper from "./../../hoc/auxWrapper";
 import DatePicker from "../Booking/DatePicker/DatePicker";
 
 class Booking extends Component {

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Layout.css";
 
-import AuxWrapper from "../../hoc/AuxWrapper";
+import AuxWrapper from "../../hoc/auxWrapper";
 
 const layout = props => (
   <AuxWrapper>
