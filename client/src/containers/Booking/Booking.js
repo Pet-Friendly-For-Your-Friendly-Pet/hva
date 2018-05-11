@@ -1,14 +1,25 @@
 import React, { Component } from "react";
+import classes from "./Booking.css";
 
-import auxWrapper from "./../../hoc/auxWrapper";
+import AuxWrapper from "./../../hoc/AuxWrapper";
+import DatePicker from "../../containers/DatePicker/DatePicker";
 
 class Booking extends Component {
+  state = {
+    dates: {
+      from: new.Date(),
+      to: new.Date()
+    }
+  }
   render() {
     return (
-      <auxWrapper>
-        <div>A section to select how long of a stay</div>
-        <div>Additional Booking options</div>
-      </auxWrapper>
+      <AuxWrapper>
+        <div className={classes.Container}>
+          <div>A section to select how long of a stay</div>
+          <DatePicker />
+          <div>Additional Booking options</div>
+        </div>
+      </AuxWrapper>
     );
   }
 }
