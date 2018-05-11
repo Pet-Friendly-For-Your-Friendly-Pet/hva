@@ -17,8 +17,6 @@ class DatePicker extends Component {
   }
 }
 
-DatePicker.propTypes = {
-  type: PropTypes.date
-};
+DatePicker.propTypes = {};
 
 export default DatePicker;

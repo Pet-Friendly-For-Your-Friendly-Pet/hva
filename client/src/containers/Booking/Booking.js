@@ -2,15 +2,10 @@ import React, { Component } from "react";
 import classes from "./Booking.css";
 
 import AuxWrapper from "./../../hoc/AuxWrapper";
-import DatePicker from "../../containers/DatePicker/DatePicker";
+import DatePicker from "../Booking/DatePicker/DatePicker";
 
 class Booking extends Component {
-  state = {
-    dates: {
-      from: new.Date(),
-      to: new.Date()
-    }
-  }
+  state = {};
   render() {
     return (
       <AuxWrapper>
