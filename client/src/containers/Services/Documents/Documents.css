@@ -1,41 +1,45 @@
 .container {
-    width: 100%;
+  width: 100%;
 }
 
 .header {
-    font-size: 40px;
-    font-weight: normal;
-    border-bottom: 2px solid black;
-    margin: 0;
+  font-size: 40px;
+  font-weight: normal;
+  border-bottom: 2px solid black;
+  margin: 10px;
 }
 
 .documentsBox {
-    width: 75%;
-    border: 1px solid black;
-    margin: 0 auto;
-    text-align: center;
+  width: 75%;
+  border: 1px solid black;
+  margin: 0 auto;
+  text-align: start;
 }
 
 .documentsBox ul li {
-    padding: 8px;
+  padding: 8px;
 }
 
 .documentsBox ul li a:link {
-    color: black;
-    outline: none;
-    text-decoration: none;
+  color: black;
+  outline: none;
+  text-decoration: none;
 }
 
 .documentsBox ul li a:hover {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .documentsBox ul li a:visited {
-    color: rgb(83, 187, 149);
-    font-style: italic;
-    font-style: none;
+  color: rgb(83, 187, 149);
+  font-style: italic;
+  font-style: none;
 }
 
 .documentsContainer {
-    padding: 20px;
+  padding: 20px;
+}
+
+ul li {
+  list-style: none;
 }
