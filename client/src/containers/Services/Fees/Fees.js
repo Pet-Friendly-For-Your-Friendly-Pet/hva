@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./Fees.css";
 
-import FaHeartO from "react-icons/lib/fa/heart-o";
 import FaHome from "react-icons/lib/fa/home";
 
 const Fees = props => {
@@ -22,7 +21,7 @@ const Fees = props => {
             <li>
               <p>
                 <small>
-                  <em>Minimum 3 month commitment</em>
+                  <em>* Minimum 3 month commitment *</em>
                 </small>
               </p>
             </li>

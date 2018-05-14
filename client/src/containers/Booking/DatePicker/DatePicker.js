@@ -114,10 +114,10 @@ class DatePicker extends Component {
     border-bottom-right-radius: 50% !important;
   }
   .InputFromTo .DayPickerInput-Overlay {
-    width: 294px;
+    width: 316px;
   }
   .InputFromTo-to .DayPickerInput-Overlay {
-    margin-left: -38px;
+    margin-left: -60px;
   }
 `}</style>
           </Helmet>
