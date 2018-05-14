@@ -1,0 +1,41 @@
+
+.container {
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: url('http://www.pngmart.com/files/4/Desert-PNG-Clipart.png');
+}
+
+.eep {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 200px;
+    transition: font-size .1s ease-in
+}
+
+.eep:hover {
+    font-size: 3em;
+    transition: font-size .1s ease-out;
+}
+
+img.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+    img.bg {
+        left: 50%;
+        margin-left: -512px;
+    }
+}

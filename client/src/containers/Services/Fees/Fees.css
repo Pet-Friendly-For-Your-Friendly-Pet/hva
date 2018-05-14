@@ -1,0 +1,21 @@
+.header {
+    font-size: 40px;
+    font-weight: normal;
+    border-bottom: 2px solid black;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.priceBox {
+    width: 75%;
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricingContainer {
+    padding: 20px;
+}

@@ -1,0 +1,41 @@
+/* .messageWrapper {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+
+header.message {
+    float: right;
+} */
+
+.landingHeader {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 20vh;
+    display: flex;
+}
+
+.landingHeader h1 {
+    color: #000000;
+    margin: 0 auto;
+    position: inherit;
+    animation: imageAnimation 50s linear infinite;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20% {
+        opacity: 1
+    }
+    30% {
+        opacity: 0
+    }
+}
