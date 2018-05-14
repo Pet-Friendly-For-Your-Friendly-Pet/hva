@@ -1,4 +1,12 @@
 .Container {
   width: 100%;
   margin: auto;
+  display: flex;
+}
+
+.datePickerContainer {
+  padding: 20px;
+  width: 100%;
+  align-content: center;
+  border: 2px solid black;
 }

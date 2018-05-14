@@ -10,9 +10,9 @@ class Booking extends Component {
     return (
       <AuxWrapper>
         <div className={classes.Container}>
-          <div>A section to select how long of a stay</div>
-          <DatePicker />
-          <div>Additional Booking options</div>
+          <div className={classes.datePickerContainer}>
+            <DatePicker />
+          </div>
         </div>
       </AuxWrapper>
     );

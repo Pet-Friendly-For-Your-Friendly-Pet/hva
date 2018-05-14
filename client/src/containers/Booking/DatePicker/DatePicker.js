@@ -3,8 +3,9 @@ import Helmet from "react-helmet";
 import moment from "moment";
 import PropTypes from "prop-types";
 import DayPickerInput from "react-day-picker/DayPickerInput";
-
 import { formatDate, parseDate } from "react-day-picker/moment";
+
+import classes from "./DatePicker.css";
 
 class DatePicker extends Component {
   constructor(props) {
@@ -36,53 +37,67 @@ class DatePicker extends Component {
   handleFromChange(from) {
     // Change the from date and focus the "to" input field
     this.setState({ from });
+    console.log(from);
   }
   handleToChange(to) {
     this.setState({ to }, this.showFromMonth);
+    console.log(to);
   }
   render() {
     const { from, to } = this.state;
     const modifiers = { start: from, end: to };
     return (
-      <div className="InputFromTo">
-        <DayPickerInput
-          value={from}
-          placeholder="From"
-          format="LL"
-          formatDate={formatDate}
-          parseDate={parseDate}
-          dayPickerProps={{
-            selectedDays: [from, { from, to }],
-            disabledDays: { after: to },
-            toMonth: to,
-            modifiers,
-            numberOfMonths: 2,
-            onDayClick: () => this.to.getInput().focus()
-          }}
-          onDayChange={this.handleFromChange}
-        />{" "}
-        —{" "}
-        <span className="InputFromTo-to">
+      <div className={classes.DatePickerContainer}>
+        <div className="InputFromTo">
           <DayPickerInput
-            ref={el => (this.to = el)}
-            value={to}
-            placeholder="To"
+            value={from}
+            placeholder="From"
             format="LL"
             formatDate={formatDate}
             parseDate={parseDate}
             dayPickerProps={{
               selectedDays: [from, { from, to }],
-              disabledDays: { before: from },
+              disabledDays: { after: to },
+              toMonth: to,
               modifiers,
-              month: from,
-              fromMonth: from,
-              numberOfMonths: 2
+              numberOfMonths: 1,
+              onDayClick: () => this.to.getInput().focus()
             }}
-            onDayChange={this.handleToChange}
-          />
-        </span>
-        <Helmet>
-          <style>{`
+            onDayChange={this.handleFromChange}
+          />{" "}
+          —{" "}
+          <span className="InputFromTo-to">
+            <DayPickerInput
+              ref={el => (this.to = el)}
+              value={to}
+              placeholder="To"
+              format="LL"
+              formatDate={formatDate}
+              parseDate={parseDate}
+              dayPickerProps={{
+                selectedDays: [from, { from, to }],
+                disabledDays: { before: from },
+                modifiers,
+                month: from,
+                fromMonth: from,
+                numberOfMonths: 1
+              }}
+              onDayChange={this.handleToChange}
+            />
+          </span>
+          <Helmet>
+            <style>{`
+  .InputFromTo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  .DayPickerInput input {
+    font-size: 20px;
+    padding: 5px;
+  }
   .InputFromTo .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
     background-color: #f0f8ff !important;
     color: #4a90e2;
@@ -99,13 +114,14 @@ class DatePicker extends Component {
     border-bottom-right-radius: 50% !important;
   }
   .InputFromTo .DayPickerInput-Overlay {
-    width: 550px;
+    width: 294px;
   }
   .InputFromTo-to .DayPickerInput-Overlay {
-    margin-left: -198px;
+    margin-left: -38px;
   }
 `}</style>
-        </Helmet>
+          </Helmet>
+        </div>
       </div>
     );
   }
