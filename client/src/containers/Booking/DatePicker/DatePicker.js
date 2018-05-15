@@ -4,6 +4,7 @@ import moment from "moment";
 import PropTypes from "prop-types";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import { formatDate, parseDate } from "react-day-picker/moment";
+import FaCalendar from "react-icons/lib/fa/calendar";
 
 import classes from "./DatePicker.css";
 
@@ -65,7 +66,7 @@ class DatePicker extends Component {
             }}
             onDayChange={this.handleFromChange}
           />{" "}
-          —{" "}
+          <FaCalendar />{" "}
           <span className="InputFromTo-to">
             <DayPickerInput
               ref={el => (this.to = el)}

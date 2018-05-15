@@ -4,6 +4,7 @@ import classes from "./Booking.css";
 import AuxWrapper from "./../../hoc/auxWrapper";
 import DatePicker from "../Booking/DatePicker/DatePicker";
 import Services from "../Services/Services";
+import BookingControls from "./BookingControls/BookingControls";
 
 class Booking extends Component {
   state = {
@@ -16,7 +17,8 @@ class Booking extends Component {
       <AuxWrapper>
         <div className={classes.Container}>
           <div className={classes.datePickerContainer}>
-            <DatePicker />
+            <DatePicker monthCount={this.state.monthCount} />
+            <BookingControls />
           </div>
           <Services />
         </div>
