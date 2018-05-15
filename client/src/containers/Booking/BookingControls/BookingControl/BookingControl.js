@@ -9,6 +9,7 @@ const bookingControl = props => (
     <button>
       <FaPlusSquareO className={classes.More} />
     </button>
+
     <button>
       <FaMinusSquareO className={classes.Less} />
     </button>

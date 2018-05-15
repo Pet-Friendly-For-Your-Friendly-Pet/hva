@@ -1,6 +1,6 @@
 .BookingControl {
   display: flex;
-  width: 100%;
+  width: 50%;
   flex-flow: column;
   justify-content: flex-start;
 }
@@ -16,7 +16,7 @@
   cursor: pointer;
   outline: none;
   width: 26px;
-  border-radius: 4px;
+  border-radius: 6px;
   height: 27px;
 }
 
@@ -59,12 +59,12 @@
 
 .BookingControl .Less:hover,
 .BookingControl .Less:active {
-  color: rgb(83, 187, 149);
+  color: rgb(183, 187, 186);
   cursor: pointer;
 }
 
 .BookingControl .More:hover,
 .BookingControl .More:active {
-  color: rgb(83, 187, 149);
+  color: rgb(183, 187, 186);
   cursor: pointer;
 }
