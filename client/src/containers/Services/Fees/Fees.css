@@ -1,12 +1,12 @@
+.container {
+  width: 100%;
+}
+
 .header {
   font-size: 40px;
   font-weight: normal;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   margin: 10px;
-}
-
-.container {
-  width: 100%;
 }
 
 .priceBox {

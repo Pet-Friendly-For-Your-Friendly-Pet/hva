@@ -8,7 +8,6 @@ const layout = props => (
   <AuxWrapper>
     <div>ToolBar, SideDrawer, Backdrop</div>
     <main className={classes.Content}>{props.children}</main>
-    <Services />
   </AuxWrapper>
 );
 
