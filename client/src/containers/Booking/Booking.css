@@ -11,3 +11,7 @@
   border: 1px solid black;
   height: 500px;
 }
+
+button:disabled {
+  display: none;
+}

@@ -8,11 +8,11 @@ import FaMinusSquareO from "react-icons/lib/fa/minus-square-o";
 const horseCountControl = props => (
   <auxWrapper className={classes.auxWrapper}>
     <div className={classes.BookingControl}>
+      <button onClick={props.removed} disabled={props.disabled}>
+        <FaMinusSquareO className={classes.Less} />
+      </button>
       <button onClick={props.added}>
         <FaPlusSquareO className={classes.More} />
-      </button>
-      <button>
-        <FaMinusSquareO className={classes.Less} />
       </button>
     </div>
     <div className={classes.CounterControl}>

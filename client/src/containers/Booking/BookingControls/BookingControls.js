@@ -10,6 +10,8 @@ const bookingControls = props => (
       <HorseCountControl
         horseCount={props.horseCount}
         added={props.horseAdded}
+        removed={props.horseRemoved}
+        disabled={props.disabled.horseCount}
       />
     </div>
   </AuxWrapper>

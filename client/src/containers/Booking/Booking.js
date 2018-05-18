@@ -17,7 +17,8 @@ class Booking extends Component {
     horseCount: 0,
     monthCount: 0,
     horsePrice: 0,
-    monthPrice: 0
+    monthPrice: 0,
+    totalPrice: 0
   };
 
   addHorseHandler = () => {
@@ -26,9 +27,21 @@ class Booking extends Component {
     this.setState({ horseCount: updatedCount });
   };
 
-  removeHorseHandler = () => {};
+  removeHorseHandler = () => {
+    const oldCount = this.state.horseCount;
+    const updatedCount = oldCount - 1;
+    this.setState({ horseCount: updatedCount });
+  };
 
   render() {
+    const disabled = {
+      ...this.state
+    };
+    if (disabled.horseCount === 0) {
+      disabled.horseCount = true;
+    } else {
+      disabled.horseCount = false;
+    }
     return (
       <AuxWrapper>
         <div className={classes.Container}>
@@ -37,6 +50,8 @@ class Booking extends Component {
             <BookingControls
               horseCount={this.state.horseCount}
               horseAdded={this.addHorseHandler}
+              horseRemoved={this.removeHorseHandler}
+              disabled={disabled}
             />
           </div>
           <Services />
