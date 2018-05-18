@@ -1,6 +1,7 @@
 .auxWrapper {
   display: inline-flex;
   align-items: flex-end;
+  width: 50%;
 }
 
 .BookingControl {
