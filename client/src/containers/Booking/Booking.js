@@ -18,7 +18,7 @@ class Booking extends Component {
         <div className={classes.Container}>
           <div className={classes.datePickerContainer}>
             <DatePicker monthCount={this.state.monthCount} />
-            <BookingControls />
+            <BookingControls horseCount={this.state.horseCount} />
           </div>
           <Services />
         </div>

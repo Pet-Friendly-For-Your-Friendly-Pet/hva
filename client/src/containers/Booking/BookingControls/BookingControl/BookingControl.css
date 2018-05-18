@@ -1,8 +1,14 @@
+.auxWrapper {
+  display: inline-flex;
+  align-items: flex-end;
+}
+
 .BookingControl {
-  display: flex;
-  width: 50%;
+  width: 5%;
   flex-flow: column;
   justify-content: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 .BookingControl button {
@@ -33,10 +39,11 @@
 }
 
 .Label {
-  padding: 10px;
+  padding-top: 5px;
   font-weight: lighter;
-  width: 240px;
-  text-align: center;
+  width: 200px;
+  z-index: 1;
+  margin-top: -28px;
 }
 
 .BookingControl .Less {
@@ -67,4 +74,10 @@
 .BookingControl .More:active {
   color: rgb(183, 187, 186);
   cursor: pointer;
+}
+
+.CounterControl {
+  margin: auto 0;
+  padding: 0;
+  padding-left: 40px;
 }

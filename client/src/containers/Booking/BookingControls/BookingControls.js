@@ -10,7 +10,11 @@ const bookingControls = props => (
   <AuxWrapper>
     <div className={classes.BookingControls}>
       {controls.map(ctrl => (
-        <BookingControl key={ctrl.label} label={ctrl.label} />
+        <BookingControl
+          key={ctrl.label}
+          label={ctrl.label}
+          horseCount={props.horseCount}
+        />
       ))}
     </div>
   </AuxWrapper>
