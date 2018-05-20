@@ -15,7 +15,8 @@ class DatePicker extends Component {
     this.handleToChange = this.handleToChange.bind(this);
     this.state = {
       from: undefined,
-      to: undefined
+      to: undefined,
+      dayCount: 0
     };
   }
   componentWillUnmount() {
@@ -94,10 +95,16 @@ class DatePicker extends Component {
     align-items: center;
     justify-content: space-between;
     font-size: 20px;
+    font-weight: lighter;
   }
   .DayPickerInput input {
     font-size: 20px;
-    padding: 5px;
+    padding: 5px 5px -5px 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-weight: lighter;
+    letter-spacing: 16.3px;
   }
   .InputFromTo .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
     background-color: #f0f8ff !important;

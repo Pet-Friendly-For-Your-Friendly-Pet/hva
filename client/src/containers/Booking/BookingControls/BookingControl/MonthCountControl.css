@@ -1,0 +1,48 @@
+.auxWrapperMonth {
+  display: inline-flex;
+  width: 50%;
+  align-items: flex-end;
+  text-align: right;
+  padding-left: 8%;
+}
+
+.BookingControlMonth {
+  width: 5%;
+  flex-flow: column;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.LabelMonth {
+  padding-top: 5px;
+  font-weight: lighter;
+  width: 150px;
+  z-index: 1;
+  margin-top: -28px;
+  text-align: right;
+}
+
+.CounterControlMonth {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 0;
+  padding-left: 64.2px;
+}
+
+.CounterControlMonth h1 {
+  width: 100%;
+}
+
+.CounterControlMonth h1 span {
+  align-items: flex-end;
+  padding-left: 18%;
+  font-weight: lighter;
+}
+
+.PriceBoxMonth {
+  font-size: 0.6em;
+  width: 10%;
+}

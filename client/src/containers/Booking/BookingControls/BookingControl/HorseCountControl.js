@@ -1,9 +1,10 @@
 import React from "react";
-import classes from "./BookingControl.css";
+import classes from "./HorseCountControl.css";
 import auxWrapper from "../../../../hoc/auxWrapper";
 
 import FaPlusSquareO from "react-icons/lib/fa/plus-square-o";
 import FaMinusSquareO from "react-icons/lib/fa/minus-square-o";
+import FaDollar from "react-icons/lib/fa/dollar";
 
 const horseCountControl = props => (
   <auxWrapper className={classes.auxWrapper}>
@@ -16,7 +17,13 @@ const horseCountControl = props => (
       </button>
     </div>
     <div className={classes.CounterControl}>
-      <h1>{props.horseCount}</h1>
+      <h1>
+        {props.horseCount}{" "}
+        <span className={classes.PriceBox}>
+          <FaDollar />
+          {props.horsePrice}{" "}
+        </span>{" "}
+      </h1>
       <div className={classes.Label}>Number of Horses</div>
     </div>
   </auxWrapper>

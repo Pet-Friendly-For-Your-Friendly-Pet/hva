@@ -14,22 +14,32 @@ const HORSE_PRICES = {
 
 class Booking extends Component {
   state = {
+    boarding: false,
+    boardingTotal: 0,
+    arenaRiding: false,
+    arenaRidingTotal: 0,
     horseCount: 0,
-    monthCount: 0,
     horsePrice: 0,
+    monthCount: 0,
     monthPrice: 0,
     totalPrice: 0
   };
 
   addHorseHandler = () => {
-    const oldCount = this.state.horseCount;
-    const updatedCount = oldCount + 1;
+    let oldCount = this.state.horseCount;
+    let oldhorsePrice = this.state.horsePrice;
+    let oldBoardingTotal = this.state.boardingTotal;
+    let updatedCount = oldCount + 1;
+    let updatedHorsePrice;
     this.setState({ horseCount: updatedCount });
   };
 
   removeHorseHandler = () => {
-    const oldCount = this.state.horseCount;
-    const updatedCount = oldCount - 1;
+    let oldCount = this.state.horseCount;
+    let oldhorsePrice = this.state.horsePrice;
+    let oldBoardingTotal = this.state.boardingTotal;
+    let updatedCount = oldCount - 1;
+    let updatedHorsePrice = this.state.horsePrice;
     this.setState({ horseCount: updatedCount });
   };
 
@@ -48,10 +58,16 @@ class Booking extends Component {
           <div className={classes.datePickerContainer}>
             <DatePicker monthCount={this.state.monthCount} />
             <BookingControls
-              horseCount={this.state.horseCount}
               horseAdded={this.addHorseHandler}
+              horseCount={this.state.horseCount}
+              horsePrice={this.state.horsePrice}
               horseRemoved={this.removeHorseHandler}
               disabled={disabled}
+              monthCount={this.state.monthCount}
+              monthPrice={this.state.monthPrice}
+              boarding={this.state.boarding}
+              boardingTotal={this.state.boardingTotal}
+              totalPrice={this.state.totalPrice}
             />
           </div>
           <Services />

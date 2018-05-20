@@ -1,6 +1,7 @@
 .auxWrapper {
   display: inline-flex;
   align-items: flex-end;
+  text-align: left;
   width: 50%;
 }
 
@@ -22,9 +23,9 @@
   font: inherit;
   cursor: pointer;
   outline: none;
-  width: 26px;
+  width: 25px;
   border-radius: 6px;
-  height: 27px;
+  height: 26px;
 }
 
 .BookingControl button:disabled {
@@ -54,6 +55,8 @@
   display: block;
   margin-left: -7.7px;
   margin-top: -1px;
+  margin-bottom: -1.5px;
+  transition: color 0.5s ease-in-out;
 }
 
 .BookingControl .More {
@@ -63,6 +66,7 @@
   display: block;
   margin-left: -7.7px;
   margin-top: -1px;
+  transition: color 0.5s ease-in-out;
 }
 
 .BookingControl .Less:hover,
@@ -80,5 +84,20 @@
 .CounterControl {
   margin: auto 0;
   padding: 0;
-  padding-left: 40px;
+  padding-left: 64.2px;
+}
+
+.CounterControl h1 {
+  width: 100%;
+}
+
+.CounterControl h1 span {
+  align-items: flex-end;
+  padding-left: 18%;
+  font-weight: lighter;
+}
+
+.PriceBox {
+  font-size: 0.6em;
+  width: 10%;
 }
