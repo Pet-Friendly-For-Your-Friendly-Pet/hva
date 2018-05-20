@@ -53,7 +53,7 @@ class Booking extends Component {
       disabled.horseCount = false;
     }
     return (
-      <AuxWrapper>
+      <AuxWrapper className={classes.auxContainer}>
         <div className={classes.Container}>
           <div className={classes.datePickerContainer}>
             <DatePicker monthCount={this.state.monthCount} />
