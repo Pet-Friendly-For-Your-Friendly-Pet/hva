@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import classes from "./Booking.css";
 
 import AuxWrapper from "./../../hoc/auxWrapper";
+import Modal from "../../components/UI/Modal/Modal";
 import DatePicker from "../Booking/DatePicker/DatePicker";
 import Services from "../Services/Services";
 import BookingControls from "./BookingControls/BookingControls";
+import OrderSummary from "./OrderSummary/OrderSummary";
 
 const HORSE_PRICES = {
   oneHorse: 100.0,
@@ -22,7 +24,9 @@ class Booking extends Component {
     horsePrice: 0,
     monthCount: 0,
     monthPrice: 0,
-    totalPrice: 0
+    totalPrice: 0,
+    purchasable: false,
+    purchasing: false
   };
 
   addHorseHandler = () => {
@@ -43,6 +47,14 @@ class Booking extends Component {
     this.setState({ horseCount: updatedCount });
   };
 
+  purchaseHandler = () => {
+    this.setState({ purchasing: true });
+  };
+
+  purchaseCancelHandler = () => {
+    this.setState({ purchasing: false });
+  };
+
   render() {
     const disabled = {
       ...this.state
@@ -54,6 +66,22 @@ class Booking extends Component {
     }
     return (
       <AuxWrapper className={classes.auxContainer}>
+        <Modal
+          show={this.state.purchasing}
+          modalClosed={this.purchaseCancelHandler}
+        >
+          <OrderSummary
+            boarding={this.state.boarding}
+            boardingTotal={this.state.boardingTotal}
+            horsePrice={this.state.horsePrice}
+            horseCount={this.state.horseCount}
+            monthPrice={this.state.monthPrice}
+            monthCount={this.state.monthCount}
+            arenaRiding={this.state.arenaRiding}
+            arenaRidingTotal={this.state.arenaRidingTotal}
+            purchaseCancelled={this.purchaseCancelHandler}
+          />
+        </Modal>
         <div className={classes.Container}>
           <div className={classes.datePickerContainer}>
             <DatePicker monthCount={this.state.monthCount} />
@@ -68,6 +96,8 @@ class Booking extends Component {
               boarding={this.state.boarding}
               boardingTotal={this.state.boardingTotal}
               totalPrice={this.state.totalPrice}
+              ordered={this.purchaseHandler}
+              purchasable={this.state.purchasable}
             />
           </div>
           <Services />

@@ -41,6 +41,34 @@
   text-align: right;
 }
 
+.orderButtonContainer {
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+}
+
+.OrderButton {
+  color: black;
+  padding: 5px 10px;
+  outline: none;
+  margin-top: 2%;
+  font-size: 0.9em;
+  font-family: inherit;
+  background-color: transparent;
+  font-weight: lighter;
+  letter-spacing: 4px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+.OrderButton:hover {
+  color: white;
+  background-color: rgb(10, 184, 74);
+  cursor: pointer;
+}
+
 .totalPriceContainer {
   font-size: 24px;
   text-align: left;

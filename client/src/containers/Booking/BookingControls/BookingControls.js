@@ -32,6 +32,11 @@ const bookingControls = props => (
         <span>{props.totalPrice}</span>
       </span>
     </div>
+    <div className={classes.orderButtonContainer}>
+      <button className={classes.OrderButton} onClick={props.ordered}>
+        Continue
+      </button>
+    </div>
   </AuxWrapper>
 );
 export default bookingControls;
