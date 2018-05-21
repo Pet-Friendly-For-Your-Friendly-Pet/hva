@@ -26,7 +26,8 @@ class Booking extends Component {
     monthPrice: 0,
     totalPrice: 0,
     purchasable: false,
-    purchasing: false
+    purchasing: false,
+    purchased: false
   };
 
   addHorseHandler = () => {
@@ -49,6 +50,12 @@ class Booking extends Component {
 
   purchaseHandler = () => {
     this.setState({ purchasing: true });
+  };
+
+  completedPurchaseHandler = () => {
+    this.setState({ purchased: true });
+    //put loading spinner in here
+    //push to thank you UI page
   };
 
   purchaseCancelHandler = () => {
@@ -80,6 +87,8 @@ class Booking extends Component {
             arenaRiding={this.state.arenaRiding}
             arenaRidingTotal={this.state.arenaRidingTotal}
             purchaseCancelled={this.purchaseCancelHandler}
+            purchaseCompleted={this.completedPurchaseHandler}
+            totalPrice={this.state.totalPrice}
           />
         </Modal>
         <div className={classes.Container}>

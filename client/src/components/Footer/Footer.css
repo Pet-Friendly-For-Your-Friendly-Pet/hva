@@ -1,37 +1,44 @@
 .Footer {
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #000000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 90;
+  height: 35px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  z-index: 90;
+}
+
+.social {
+  width: 10%;
+}
+
+.social a {
+  padding: 0 4%;
 }
 
 .facebook {
-    font-size: 36px;
-    color: white;
-    transition-property: color;
-    transition-duration: .3s;
-}
-
-.facebook:hover {
-    color: #3B5998;
+  font-size: 24px;
+  color: white;
+  transition-property: color;
+  transition-duration: 0.3s;
 }
 
 .email {
-    font-size: 36px;
-    color: white;
-    padding-left: 8px;
-    transition-property: color;
-    transition-duration: .3s;
+  font-size: 24px;
+  color: white;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.facebook:hover {
+  color: #3b5998;
 }
 
 .email:hover {
-    color: #FDC69E
+  color: #fdc69e;
 }

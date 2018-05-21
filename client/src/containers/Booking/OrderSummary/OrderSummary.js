@@ -15,6 +15,8 @@ class OrderSummary extends Component {
     let reviewHorsePrice = this.props.horsePrice;
     let reviewBoardingTotal = this.props.boardingTotal;
     let reviewRidingTotal = this.props.arenaRidingTotal;
+    let reviewTotalPrice = this.props.totalPrice;
+
     return (
       <auxWrapper className={classes.listReviewContainer}>
         <div className={classes.listReviewHeader}>
@@ -79,7 +81,10 @@ class OrderSummary extends Component {
             <Button clicked={this.props.purchaseCancelled} btnType="Cancel">
               Cancel
             </Button>
-            <StripeWrapper />
+            <StripeWrapper
+              finalPrice={this.props.totalPrice}
+              purchaseCompleted={this.props.purchaseCompleted}
+            />
           </div>
         </div>
       </auxWrapper>

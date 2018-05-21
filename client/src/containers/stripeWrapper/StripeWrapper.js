@@ -7,11 +7,12 @@ import classes from "./StripeWrapper.css";
 
 class StripeWrapper extends Component {
   render() {
+    let totalCost = this.props.finalPrice;
     return (
       <StripeCheckout
         name="Hill View Arena"
         description="Arena Fees"
-        amount={500}
+        amount={totalCost}
         token={token => this.props.handleToken(token)}
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >

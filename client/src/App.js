@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
+import Layout from "./hoc/Layout/Layout";
+
+import Home from "./containers/Home/Home";
+import About from "./containers/About/About";
 import Booking from "./containers/Booking/Booking";
 
 class App extends Component {
@@ -10,7 +13,9 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <Layout>
-            <Booking />
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/booking" component={Booking} />
           </Layout>
         </BrowserRouter>
       </div>
@@ -19,3 +24,5 @@ class App extends Component {
 }
 
 export default App;
+
+// <Route path="/" exact component={Home} />
