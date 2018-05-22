@@ -15,7 +15,9 @@ const MonthCountControl = props => (
           {props.monthPrice}{" "}
         </span>{" "}
       </h1>
-      <div className={classes.LabelMonth}>Number of Months</div>
+      <div className={classes.LabelMonth}>
+        <span>Month count</span>
+      </div>
     </div>
   </auxWrapper>
 );

@@ -12,39 +12,31 @@
 }
 
 .Header {
-  margin: 0;
   font-size: 24px;
-  text-justify: kashida;
-  padding-top: 2.9%;
   padding-bottom: 0;
   padding-right: 0;
   margin-bottom: 0;
   margin-right: 0;
   font-weight: lighter;
   letter-spacing: 16.3px;
-  width: 50%;
+  width: 52.2%;
 }
 
 .HeaderTwo {
-  margin: 0;
   font-size: 24px;
-  text-justify: kashida;
-  padding-top: 2.9%;
   padding-bottom: 0;
-  padding-left: 3%;
-  padding-right: 0;
+  padding-right: 1.8%;
   margin-bottom: 0;
-  margin-right: -1.2em;
+  margin-right: 0;
   font-weight: lighter;
   letter-spacing: 16.3px;
-  width: 50%;
+  width: 48.8%;
   text-align: right;
 }
 
 .orderButtonContainer {
   width: 100%;
   text-align: center;
-  margin: 10px;
 }
 
 .OrderButton {
@@ -60,7 +52,7 @@
   border-top: none;
   border-right: none;
   border-left: none;
-  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 .OrderButton:hover {
@@ -70,18 +62,21 @@
 }
 
 .totalPriceContainer {
-  font-size: 24px;
   text-align: left;
   width: 100%;
-  padding: 10px 0px 0px 0px;
+  padding: 21.2% 0px 0px 0px;
   font-size: 18px;
   letter-spacing: 12.5px;
   font-weight: lighter;
   border-bottom: 1px solid black;
 }
 
+.totalPrice {
+  width: 25%;
+}
+
 .totalPrice span {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: lighter;
-  padding-left: 11%;
+  text-align: right;
 }

@@ -42,9 +42,9 @@
 
 .Label {
   padding-top: 5px;
+  padding-right: 10px;
   font-weight: lighter;
-  width: 200px;
-  z-index: 1;
+  width: 100px;
   margin-top: -28px;
 }
 
@@ -83,8 +83,8 @@
 
 .CounterControl {
   margin: auto 0;
-  padding: 0;
-  padding-left: 64.2px;
+  padding: 1px;
+  width: 80%;
 }
 
 .CounterControl h1 {
@@ -93,11 +93,17 @@
 
 .CounterControl h1 span {
   align-items: flex-end;
-  padding-left: 18%;
+  padding-left: 27%;
   font-weight: lighter;
 }
 
 .PriceBox {
   font-size: 0.6em;
   width: 10%;
+}
+
+@media (min-width: 499px) {
+  .CounterControl {
+    width: 40%;
+  }
 }
