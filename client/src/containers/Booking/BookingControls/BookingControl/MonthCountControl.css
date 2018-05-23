@@ -38,7 +38,7 @@
   .auxWrapperMonth {
     display: inline-flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 50%;
   }
 
   .LabelMonth {
@@ -50,7 +50,7 @@
 
   .CounterControlMonth {
     margin: auto 0;
-    padding: 1px 18.7% 0px 0px;
+    padding: 1px 31.7% 0px 0px;
     width: 20%;
     text-align: left;
   }

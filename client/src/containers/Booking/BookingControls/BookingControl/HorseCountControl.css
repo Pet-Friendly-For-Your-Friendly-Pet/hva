@@ -87,11 +87,12 @@
 
 .CounterControl h1 {
   width: 100%;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .CounterControl h1 span {
   align-items: flex-end;
-
   font-weight: lighter;
 }
 
@@ -106,7 +107,6 @@
     text-align: left;
     width: 50%;
   }
-
   .BookingControl {
     width: 5%;
     flex-flow: column;
@@ -114,7 +114,6 @@
     padding: 0;
     margin: 0;
   }
-
   .BookingControl button {
     background: none;
     background-color: white;
@@ -129,19 +128,16 @@
     border-radius: 6px;
     height: 26px;
   }
-
   .BookingControl button:disabled {
     background-color: #ac9980;
     color: #ccc;
     cursor: default;
   }
-
   .BookingControl button:hover:disabled {
     background-color: #ac9980;
     color: #ccc;
     cursor: not-allowed;
   }
-
   .Label {
     padding-top: 5px;
     padding-right: 10px;
@@ -149,7 +145,6 @@
     width: 100px;
     margin-top: -28px;
   }
-
   .BookingControl .Less {
     color: black;
     font-size: 25px;
@@ -160,7 +155,6 @@
     margin-bottom: -1.5px;
     transition: color 0.5s ease-in-out;
   }
-
   .BookingControl .More {
     color: black;
     font-size: 25px;
@@ -170,36 +164,30 @@
     margin-top: -1px;
     transition: color 0.5s ease-in-out;
   }
-
   .BookingControl .Less:hover,
   .BookingControl .Less:active {
     color: rgb(183, 187, 186);
     cursor: pointer;
   }
-
   .BookingControl .More:hover,
   .BookingControl .More:active {
     color: rgb(183, 187, 186);
     cursor: pointer;
   }
-
   .CounterControl {
     margin: auto 0;
     padding: 1px;
-    width: 80%;
+    width: 40%;
   }
-
   .CounterControl h1 {
-    width: 50%;
+    width: 52%;
     padding: 0;
   }
-
   .CounterControl h1 span {
     align-items: flex-end;
     padding-left: 27%;
     font-weight: lighter;
   }
-
   .PriceBox {
     font-size: 0.6em;
     width: 10%;
