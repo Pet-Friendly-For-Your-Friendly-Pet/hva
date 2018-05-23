@@ -1,7 +1,7 @@
 .auxWrapperMonth {
   display: inline-flex;
   justify-content: flex-end;
-  width: 20%;
+  width: 100%;
 }
 
 .LabelMonth {
@@ -33,8 +33,40 @@
   width: 10%;
 }
 
+/* Full Screen  */
 @media (min-width: 499px) {
   .auxWrapperMonth {
+    display: inline-flex;
+    justify-content: flex-end;
     width: 100%;
+  }
+
+  .LabelMonth {
+    padding-top: 5px;
+    font-weight: lighter;
+    width: 100%;
+    margin-top: -28px;
+  }
+
+  .CounterControlMonth {
+    margin: auto 0;
+    padding: 1px 18.7% 0px 0px;
+    width: 20%;
+    text-align: left;
+  }
+
+  .CounterControlMonth h1 {
+    width: 100%;
+  }
+
+  .CounterControlMonth h1 span {
+    align-items: flex-end;
+    padding-left: 27%;
+    font-weight: lighter;
+  }
+
+  .PriceBoxMonth {
+    font-size: 0.6em;
+    width: 10%;
   }
 }
