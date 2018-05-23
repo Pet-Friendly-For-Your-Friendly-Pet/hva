@@ -2,17 +2,38 @@
   width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 }
 
 .datePickerContainer {
   padding: 40px 20px 20px 20px;
-  width: 100%;
   align-content: center;
   border: 1px solid black;
-  height: 500px;
+  border-bottom: none;
+  height: 100%;
 }
 
 button:disabled {
   display: none;
+}
+
+@media only screen and (min-width: 499px) {
+  .Container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+  }
+
+  .datePickerContainer {
+    padding: 40px 20px 20px 20px;
+    width: 100%;
+    align-content: center;
+    border: 1px solid black;
+    height: 500px;
+  }
+
+  button:disabled {
+    display: none;
+  }
 }
