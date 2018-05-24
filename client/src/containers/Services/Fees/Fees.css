@@ -40,8 +40,8 @@
     font-weight: normal;
     border-bottom: 1px solid black;
     margin: 10px;
-    padding-top: 2px;
-    padding-bottom: -2px;
+    padding-top: 12.5px;
+    padding-bottom: -12.5px;
   }
 
   .priceBox {
@@ -61,6 +61,6 @@
   }
 
   .pricingContainer {
-    padding: 40px 20px 60px 20px;
+    padding: 27px 20px 67.2px 20px;
   }
 }

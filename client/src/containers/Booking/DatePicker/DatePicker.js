@@ -67,7 +67,7 @@ class DatePicker extends Component {
             }}
             onDayChange={this.handleFromChange}
           />{" "}
-          <FaCalendar />{" "}
+          <FaCalendar className="calendarIcon" />{" "}
           <span className="InputFromTo-to">
             <DayPickerInput
               ref={el => (this.to = el)}
@@ -98,7 +98,7 @@ class DatePicker extends Component {
     font-size: 20px;
     font-weight: lighter;
   }
-  .InputFromTo svg {
+  .InputFromTo .calendarIcon {
     padding: 15px;
   }
   .DayPickerInput input {

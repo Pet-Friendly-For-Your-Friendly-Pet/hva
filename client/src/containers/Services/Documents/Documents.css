@@ -46,9 +46,8 @@ ul li {
     width: 100%;
   }
 
-  .header {
+  .headerDocuments {
     font-size: 40px;
-    padding-top: 4px;
     font-weight: normal;
     border-bottom: 1px solid black;
     margin: 10px;

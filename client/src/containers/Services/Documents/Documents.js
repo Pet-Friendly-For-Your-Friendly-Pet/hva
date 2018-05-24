@@ -11,7 +11,7 @@ class Documents extends Component {
   render() {
     return (
       <div className={classes.container}>
-        <h4 className={classes.header}>Documents</h4>
+        <h4 className={classes.headerDocuments}>Documents</h4>
         <div className={classes.documentsContainer}>
           <section className={classes.documentsBox}>
             <ul className={classes.documentsList}>

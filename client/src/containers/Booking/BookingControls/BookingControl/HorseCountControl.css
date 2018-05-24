@@ -150,7 +150,7 @@
     font-size: 25px;
     align-self: flex-start;
     display: block;
-    margin-left: -7.7px;
+    margin-left: -8.7px;
     margin-top: -1px;
     margin-bottom: -1.5px;
     transition: color 0.5s ease-in-out;
@@ -160,7 +160,7 @@
     font-size: 25px;
     align-self: flex-start;
     display: block;
-    margin-left: -7.7px;
+    margin-left: -8.7px;
     margin-top: -1px;
     transition: color 0.5s ease-in-out;
   }
@@ -177,6 +177,7 @@
   .CounterControl {
     margin: auto 0;
     padding: 1px;
+    padding-right: 27px;
     width: 50%;
   }
   .CounterControl h1 {
