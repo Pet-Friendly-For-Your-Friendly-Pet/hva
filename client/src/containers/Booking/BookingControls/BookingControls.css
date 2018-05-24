@@ -101,19 +101,23 @@
     margin-right: 0;
     font-weight: lighter;
     letter-spacing: 16.3px;
-    width: 52.2%;
+    width: 50%;
   }
 
   .HeaderTwo {
     font-size: 24px;
     padding-bottom: 0;
-    padding-right: 1.8%;
+    padding-right: 0;
     margin-bottom: 0;
     margin-right: 0;
     font-weight: lighter;
     letter-spacing: 16.3px;
-    width: 48.8%;
+    width: 50%;
     text-align: right;
+  }
+
+  .HeaderTwo h1 {
+    padding-left: 15%;
   }
 
   .orderButtonContainer {
@@ -161,5 +165,6 @@
     font-size: 18px;
     font-weight: lighter;
     text-align: right;
+    padding-left: 13.2%;
   }
 }

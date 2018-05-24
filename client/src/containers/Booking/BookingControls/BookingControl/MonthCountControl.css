@@ -50,8 +50,8 @@
 
   .CounterControlMonth {
     margin: auto 0;
-    padding: 1px 31.7% 0px 0px;
-    width: 20%;
+    padding: 1px 0px 0px 0px;
+    width: auto;
     text-align: left;
   }
 

@@ -17,8 +17,8 @@ const HORSE_PRICES = {
 class Booking extends Component {
   state = {
     boarding: false,
-    boardingTotal: 0,
     arenaRiding: false,
+    boardingTotal: 0,
     arenaRidingTotal: 0,
     horseCount: 0,
     horsePrice: 0,

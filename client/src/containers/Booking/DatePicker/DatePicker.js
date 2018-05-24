@@ -89,13 +89,17 @@ class DatePicker extends Component {
           </span>
           <Helmet>
             <style>{`
-  .InputFromTo {
+  @media (min-width: 499px) {
+    .InputFromTo {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 20px;
     font-weight: lighter;
+  }
+  .InputFromTo svg {
+    padding: 15px;
   }
   .DayPickerInput input {
     font-size: 20px;
@@ -105,10 +109,14 @@ class DatePicker extends Component {
     border-right: none;
     font-weight: lighter;
     letter-spacing: 16.3px;
+    padding-right: 120px
   }
   .InputFromTo .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
     background-color: #f0f8ff !important;
     color: #4a90e2;
+  }
+  .InputFromTo-to {
+    padding-right: 11.5px;
   }
   .InputFromTo .DayPicker-Day {
     border-radius: 0 !important;
@@ -122,10 +130,11 @@ class DatePicker extends Component {
     border-bottom-right-radius: 50% !important;
   }
   .InputFromTo .DayPickerInput-Overlay {
-    width: 316px;
+    width: 312px;
   }
   .InputFromTo-to .DayPickerInput-Overlay {
-    margin-left: -60px;
+    margin-left: -24px;
+  }
   }
 `}</style>
           </Helmet>

@@ -9,7 +9,7 @@ const bookingControls = props => (
   <AuxWrapper>
     <div className={classes.Headers}>
       <h1 className={classes.Header}>Boarding</h1>
-      <h2 className={classes.HeaderTwo}>Duration</h2>
+      <h1 className={classes.HeaderTwo}>Duration</h1>
     </div>
     <div className={classes.BookingControls}>
       <HorseCountControl
