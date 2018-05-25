@@ -1,13 +1,21 @@
 import React, { Component } from "react";
+import { reduxForm, Field } from "redux-form";
+import MobileDatePicker from "./MobileDatePicker/MobileDatePicker";
 
 class MobileBooking extends Component {
   render() {
     return (
       <div>
-        <h1>Mobile Booking</h1>
+        <Field
+          type="text"
+          name="mobileBookingUserName"
+          component={MobileDatePicker}
+        />
       </div>
     );
   }
 }
 
-export default MobileBooking;
+export default reduxForm({
+  form: "mobileBookingForm"
+})(MobileBooking);

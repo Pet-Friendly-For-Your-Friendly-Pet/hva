@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import classes from "./Booking.css";
+import MediaQuery from "react-responsive";
 
 import AuxWrapper from "./../../hoc/auxWrapper";
 import Modal from "../../components/UI/Modal/Modal";
@@ -7,6 +8,7 @@ import DatePicker from "../Booking/DatePicker/DatePicker";
 import Services from "../Services/Services";
 import BookingControls from "./BookingControls/BookingControls";
 import OrderSummary from "./OrderSummary/OrderSummary";
+import MobileBooking from "./MobileBooking/MobileBooking";
 
 const HORSE_PRICES = {
   oneHorse: 100.0,
@@ -27,7 +29,8 @@ class Booking extends Component {
     totalPrice: 0,
     purchasable: false,
     purchasing: false,
-    purchased: false
+    purchased: false,
+    dayCount: 0
   };
 
   addHorseHandler = () => {
@@ -92,9 +95,8 @@ class Booking extends Component {
           />
         </Modal>
         <div className={classes.Container}>
-          <div className={classes.datePickerContainer}>
-            <DatePicker monthCount={this.state.monthCount} />
-            <BookingControls
+          <MediaQuery query="(max-device-width: 1224px)">
+            <MobileBooking
               horseAdded={this.addHorseHandler}
               horseCount={this.state.horseCount}
               horsePrice={this.state.horsePrice}
@@ -108,7 +110,30 @@ class Booking extends Component {
               ordered={this.purchaseHandler}
               purchasable={this.state.purchasable}
             />
-          </div>
+          </MediaQuery>
+          <MediaQuery query="(min-width: 499px)">
+            <div className={classes.datePickerContainer}>
+              <DatePicker
+                monthCount={this.state.monthCount}
+                dayCount={this.state.dayCount}
+              />
+              <BookingControls
+                horseAdded={this.addHorseHandler}
+                horseCount={this.state.horseCount}
+                horsePrice={this.state.horsePrice}
+                horseRemoved={this.removeHorseHandler}
+                disabled={disabled}
+                monthCount={this.state.monthCount}
+                monthPrice={this.state.monthPrice}
+                boarding={this.state.boarding}
+                boardingTotal={this.state.boardingTotal}
+                totalPrice={this.state.totalPrice}
+                ordered={this.purchaseHandler}
+                purchasable={this.state.purchasable}
+              />
+            </div>
+          </MediaQuery>
+
           <Services />
         </div>
       </AuxWrapper>

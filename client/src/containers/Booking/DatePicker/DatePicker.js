@@ -1,149 +1,117 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import moment from "moment";
-import PropTypes from "prop-types";
-import DayPickerInput from "react-day-picker/DayPickerInput";
-import { formatDate, parseDate } from "react-day-picker/moment";
-import FaCalendar from "react-icons/lib/fa/calendar";
-
-import classes from "./DatePicker.css";
+import DayPicker, { DateUtils } from "react-day-picker";
+import "react-day-picker/lib/style.css";
 
 class DatePicker extends Component {
+  static defaultProps = {
+    numberOfMonths: 2
+  };
   constructor(props) {
     super(props);
-    this.handleFromChange = this.handleFromChange.bind(this);
-    this.handleToChange = this.handleToChange.bind(this);
-    this.state = {
+    this.handleDayClick = this.handleDayClick.bind(this);
+    this.handleResetClick = this.handleResetClick.bind(this);
+    this.state = this.getInitialState();
+  }
+  getInitialState() {
+    return {
       from: undefined,
-      to: undefined,
-      dayCount: 0
+      to: undefined
     };
   }
-  componentWillUnmount() {
-    clearTimeout(this.timeout);
+  handleDayClick(day) {
+    const range = DateUtils.addDayToRange(day, this.state);
+    // const rangeArray = range.toArray();
+    // const dayCount = rangeArray.length;
+    this.setState(range);
+    console.log(range);
   }
-  focusTo() {
-    // Focus to `to` field. A timeout is required here because the overlays
-    // already set timeouts to work well with input fields
-    this.timeout = setTimeout(() => this.to.getInput().focus(), 0);
-  }
-  showFromMonth() {
-    const { from, to } = this.state;
-    if (!from) {
-      return;
-    }
-    if (moment(to).diff(moment(from), "months") < 2) {
-      this.to.getDayPicker().showMonth(from);
-    }
-  }
-  handleFromChange(from) {
-    // Change the from date and focus the "to" input field
-    this.setState({ from });
-    console.log(from);
-  }
-  handleToChange(to) {
-    this.setState({ to }, this.showFromMonth);
-    console.log(to);
+  handleResetClick() {
+    this.setState(this.getInitialState());
   }
   render() {
     const { from, to } = this.state;
     const modifiers = { start: from, end: to };
     return (
-      <div className={classes.DatePickerContainer}>
-        <div className="InputFromTo">
-          <DayPickerInput
-            value={from}
-            placeholder="From"
-            format="LL"
-            formatDate={formatDate}
-            parseDate={parseDate}
-            dayPickerProps={{
-              selectedDays: [from, { from, to }],
-              disabledDays: { after: to },
-              toMonth: to,
-              modifiers,
-              numberOfMonths: 1,
-              onDayClick: () => this.to.getInput().focus()
-            }}
-            onDayChange={this.handleFromChange}
-          />{" "}
-          <FaCalendar className="calendarIcon" />{" "}
-          <span className="InputFromTo-to">
-            <DayPickerInput
-              ref={el => (this.to = el)}
-              value={to}
-              placeholder="To"
-              format="LL"
-              formatDate={formatDate}
-              parseDate={parseDate}
-              dayPickerProps={{
-                selectedDays: [from, { from, to }],
-                disabledDays: { before: from },
-                modifiers,
-                month: from,
-                fromMonth: from,
-                numberOfMonths: 1
-              }}
-              onDayChange={this.handleToChange}
-            />
-          </span>
-          <Helmet>
-            <style>{`
-  @media (min-width: 499px) {
-    .InputFromTo {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 20px;
-    font-weight: lighter;
-  }
-  .InputFromTo .calendarIcon {
-    padding: 15px;
-  }
-  .DayPickerInput input {
-    font-size: 20px;
-    padding: 5px 5px -5px 5px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    font-weight: lighter;
-    letter-spacing: 16.3px;
-    padding-right: 120px
-  }
-  .InputFromTo .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+      <div className="RangeExample">
+        <p>
+          {!from && !to && "When will you arrive?"}
+          {from && !to && "When will you depart?"}
+          {from &&
+            to &&
+            `Selected from ${from.toLocaleDateString()} to
+                ${to.toLocaleDateString()}`}{" "}
+          {from &&
+            to && (
+              <button className="link" onClick={this.handleResetClick}>
+                Reset
+              </button>
+            )}
+        </p>
+        <DayPicker
+          className="Selectable"
+          numberOfMonths={this.props.numberOfMonths}
+          selectedDays={[from, { from, to }]}
+          modifiers={modifiers}
+          onDayClick={this.handleDayClick}
+        />
+        <Helmet>
+          <style>{`
+
+          .DayPicker-Months {
+            padding-left: 25px;
+          }
+
+          .RangeExample p {
+            padding: 0;
+            margin: 0;
+            font-weight: lighter;
+            text-align: center;
+            justify-content: center;
+            letter-spacing: 5px;
+          }
+
+          .link {
+            color: black;
+            outline: none;
+            padding: 5px 10px;
+            margin-top: 2%;
+            font-size: 0.9em;
+            font-family: inherit;
+            background-color: transparent;
+            font-weight: lighter;
+            letter-spacing: 4px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+          }
+
+          .link:hover {
+              color: white;
+              cursor: pointer;
+              background-color: rgb(218, 35, 35);
+          }
+  .Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
     background-color: #f0f8ff !important;
     color: #4a90e2;
   }
-  .InputFromTo-to {
-    padding-right: 11.5px;
-  }
-  .InputFromTo .DayPicker-Day {
+  .Selectable .DayPicker-Day {
     border-radius: 0 !important;
   }
-  .InputFromTo .DayPicker-Day--start {
+  .Selectable .DayPicker-Day--start {
     border-top-left-radius: 50% !important;
     border-bottom-left-radius: 50% !important;
   }
-  .InputFromTo .DayPicker-Day--end {
+  .Selectable .DayPicker-Day--end {
     border-top-right-radius: 50% !important;
     border-bottom-right-radius: 50% !important;
   }
-  .InputFromTo .DayPickerInput-Overlay {
-    width: 312px;
-  }
-  .InputFromTo-to .DayPickerInput-Overlay {
-    margin-left: -24px;
-  }
-  }
 `}</style>
-          </Helmet>
-        </div>
+        </Helmet>
       </div>
     );
   }
 }
-
-DatePicker.propTypes = {};
 
 export default DatePicker;

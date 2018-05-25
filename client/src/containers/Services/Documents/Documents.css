@@ -6,7 +6,7 @@
   margin: 0 auto;
 }
 
-.header {
+.headerDocuments {
   font-size: 40px;
   font-weight: normal;
   border-bottom: 1px solid black;
@@ -15,6 +15,9 @@
   padding-bottom: -2px;
 }
 
+.documentsBox {
+  font-size: 0.8em;
+}
 .documentsBox ul li {
   padding: 8px;
 }
@@ -32,7 +35,7 @@
 }
 
 .documentsBox ul li a:visited {
-  color: rgb(183, 187, 186);
+  color: rgb(149, 149, 149);
   font-style: italic;
   font-style: none;
 }

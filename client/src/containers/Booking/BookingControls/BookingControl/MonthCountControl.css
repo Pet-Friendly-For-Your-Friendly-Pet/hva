@@ -37,7 +37,7 @@
 @media (min-width: 499px) {
   .auxWrapperMonth {
     display: inline-flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 50%;
   }
 
@@ -51,7 +51,7 @@
   .CounterControlMonth {
     margin: auto 0;
     padding: 1px 0px 0px 0px;
-    width: auto;
+    width: 100%;
     text-align: left;
   }
 
@@ -61,7 +61,7 @@
 
   .CounterControlMonth h1 span {
     align-items: flex-end;
-    padding-left: 27%;
+    padding-left: 11.3%;
     font-weight: lighter;
   }
 
