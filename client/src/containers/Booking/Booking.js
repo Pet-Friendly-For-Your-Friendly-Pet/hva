@@ -30,7 +30,9 @@ class Booking extends Component {
     purchasable: false,
     purchasing: false,
     purchased: false,
-    dayCount: 0
+    dayCount: 0,
+    from: undefined,
+    to: undefined
   };
 
   addHorseHandler = () => {
@@ -49,6 +51,16 @@ class Booking extends Component {
     let updatedCount = oldCount - 1;
     let updatedHorsePrice = this.state.horsePrice;
     this.setState({ horseCount: updatedCount });
+  };
+
+  calculateMonthsHandler = () => {
+    let oneDay = 24 * 60 * 60 * 1000; //hours*minutes*seconds*milliseconds
+    let fromDate = this.state.from;
+    let toDate = this.state.to;
+
+    let amountOfDays = Math.round(
+      Math.abs((fromDate.getTime() - toDate.getTime()) / oneDay)
+    );
   };
 
   purchaseHandler = () => {
@@ -115,7 +127,7 @@ class Booking extends Component {
             <div className={classes.datePickerContainer}>
               <DatePicker
                 monthCount={this.state.monthCount}
-                dayCount={this.state.dayCount}
+                daysBoarded={this.calculateMonthsHandler}
               />
               <BookingControls
                 horseAdded={this.addHorseHandler}

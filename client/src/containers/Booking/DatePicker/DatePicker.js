@@ -24,7 +24,6 @@ class DatePicker extends Component {
     // const rangeArray = range.toArray();
     // const dayCount = rangeArray.length;
     this.setState(range);
-    console.log(range);
   }
   handleResetClick() {
     this.setState(this.getInitialState());
