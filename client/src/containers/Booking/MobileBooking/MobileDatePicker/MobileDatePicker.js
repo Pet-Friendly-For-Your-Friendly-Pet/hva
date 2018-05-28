@@ -86,6 +86,14 @@ class MobileDatePicker extends Component {
               }}
               onDayChange={this.handleToChange}
             />
+            <p className="InputFromTo-FromTo">
+              {!from && !to && "When will you arrive?"}
+              {from && !to && "When will you depart?"}
+              {from &&
+                to &&
+                `Boarding from ${from.toLocaleDateString()} to
+                ${to.toLocaleDateString()}`}{" "}
+            </p>
           </span>
           <Helmet>
             <style>{`
@@ -97,10 +105,18 @@ class MobileDatePicker extends Component {
     justify-content: space-around;
     font-size: 20px;
     font-weight: lighter;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
   }
   .InputFromTo .calendarIcon {
-    padding: 15px;
+    padding: 5px 5px 5px 5px;
+    font-size: 48px;
   }
+
+  .DayPickerInput {
+    padding-bottom: 10px;
+  }
+
   .DayPickerInput input {
     font-size: 20px;
     padding: 5px 5px -5px 5px;
@@ -108,9 +124,14 @@ class MobileDatePicker extends Component {
     border-left: none;
     border-right: none;
     font-weight: lighter;
-    letter-spacing: 16.3px;
     padding-right: 120px
   }
+
+  .InputFromTo-FromTo {
+    font-size: .9em;
+    text-align: center;
+  }
+
   .InputFromTo .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
     background-color: #f0f8ff !important;
     color: #4a90e2;
