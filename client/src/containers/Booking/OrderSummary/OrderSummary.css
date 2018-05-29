@@ -71,7 +71,7 @@
 .reviewListTwo ul li {
   width: 60%;
   margin: 0;
-  padding: 3px 0;
+  padding: 8px 0 0 0;
   letter-spacing: 2px;
   text-align: right;
 }
@@ -102,11 +102,119 @@
   border-top: none;
   border-right: none;
   border-left: none;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-.CheckoutBtn:hover {
-  color: white;
-  background-color: black;
-  cursor: pointer;
+@media (min-width: 499px) {
+  .listReviewContainer {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+  }
+
+  .listReviewHeader {
+    padding-bottom: 5%;
+  }
+
+  .listReviewHeader h3 {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 16.3px;
+    font-weight: lighter;
+    margin: 5px auto;
+  }
+
+  .listReviewHeader p {
+    font-size: 9px;
+    text-align: center;
+    padding: 2px auto;
+    margin: 0;
+    letter-spacing: 8px;
+  }
+
+  .reviewListContainer {
+    width: 100%;
+    display: inline-flex;
+    border: 1px solid black;
+    text-align: center;
+    flex-flow: row;
+  }
+
+  .reviewListOne {
+    align-items: flex-start;
+    text-align: left;
+    font-size: 10px;
+    width: 50%;
+    margin: 0;
+  }
+
+  .reviewListOne ul {
+    width: 100%;
+    padding-left: 36%;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .reviewListOne ul li {
+    width: 60%;
+    margin: 0;
+    padding: 3px 0;
+    letter-spacing: 2px;
+  }
+
+  .reviewListTwo {
+    align-items: flex-end;
+    text-align: left;
+    font-size: 10px;
+    width: 50%;
+  }
+
+  .reviewListTwo ul {
+    width: 100%;
+    padding: 0;
+  }
+
+  .reviewListTwo ul li {
+    width: 60%;
+    margin: 0;
+    padding: 3px 0;
+    letter-spacing: 2px;
+    text-align: right;
+  }
+
+  .listReviewFooter {
+    padding: 3% 0 0 0;
+  }
+
+  .listReviewFooter div {
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 8px;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .CheckoutBtn {
+    color: black;
+    width: 112.91px;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 2%;
+    font-size: 0.9em;
+    font-family: inherit;
+    background-color: transparent;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+
+  .CheckoutBtn:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
 }

@@ -22,11 +22,13 @@ class MobileDatePicker extends Component {
   componentWillUnmount() {
     clearTimeout(this.timeout);
   }
+
   focusTo() {
     // Focus to `to` field. A timeout is required here because the overlays
     // already set timeouts to work well with input fields
     this.timeout = setTimeout(() => this.to.getInput().focus(), 0);
   }
+
   showFromMonth() {
     const { from, to } = this.state;
     if (!from) {
@@ -36,15 +38,26 @@ class MobileDatePicker extends Component {
       this.to.getDayPicker().showMonth(from);
     }
   }
+
+  updateDayCount(from, to) {
+    const oneDay = 1000 * 60 * 60 * 24;
+    let dateOneMS = from;
+    let dateTwoMS = to;
+    let differenceMS = dateTwoMS - dateOneMS;
+    let calculatedDayCount = Math.round(differenceMS / oneDay);
+    this.setState({ dayCount: calculatedDayCount });
+    console.log(this.state.dayCount);
+  }
+
   handleFromChange(from) {
     // Change the from date and focus the "to" input field
     this.setState({ from });
-    console.log(from);
   }
+
   handleToChange(to) {
     this.setState({ to }, this.showFromMonth);
-    console.log(to);
   }
+
   render() {
     const { from, to } = this.state;
     const modifiers = { start: from, end: to };
@@ -76,6 +89,7 @@ class MobileDatePicker extends Component {
               format="LL"
               formatDate={formatDate}
               parseDate={parseDate}
+              onToDateChange={this.updateDayCount}
               dayPickerProps={{
                 selectedDays: [from, { from, to }],
                 disabledDays: { before: from },
@@ -93,6 +107,9 @@ class MobileDatePicker extends Component {
                 to &&
                 `Boarding from ${from.toLocaleDateString()} to
                 ${to.toLocaleDateString()}`}{" "}
+              <span className="monthCount">
+                Duration of Stay {this.props.dayCount}
+              </span>
             </p>
           </span>
           <Helmet>
@@ -111,6 +128,12 @@ class MobileDatePicker extends Component {
   .InputFromTo .calendarIcon {
     padding: 5px 5px 5px 5px;
     font-size: 48px;
+  }
+
+  .monthCount {
+    display: block;
+    padding-top: 5px;
+    font-size: .8em;
   }
 
   .DayPickerInput {

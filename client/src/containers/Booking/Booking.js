@@ -145,7 +145,6 @@ class Booking extends Component {
               />
             </div>
           </MediaQuery>
-
           <Services />
         </div>
       </AuxWrapper>
