@@ -13,6 +13,7 @@ class MobileDatePicker extends Component {
     super(props);
     this.handleFromChange = this.handleFromChange.bind(this);
     this.handleToChange = this.handleToChange.bind(this);
+    this.updateDayCount = this.updateDayCount.bind(this);
     this.state = {
       from: undefined,
       to: undefined,
@@ -41,11 +42,12 @@ class MobileDatePicker extends Component {
 
   updateDayCount(from, to) {
     const oneDay = 1000 * 60 * 60 * 24;
-    let dateOneMS = from;
-    let dateTwoMS = to;
+    let dateOneMS = Date.parse(from);
+    let dateTwoMS = Date.parse(to);
     let differenceMS = dateTwoMS - dateOneMS;
     let calculatedDayCount = Math.round(differenceMS / oneDay);
     this.setState({ dayCount: calculatedDayCount });
+    this.props.change(this.props.input.dayCount, this.state.dayCount);
     console.log(this.state.dayCount);
   }
 
@@ -108,7 +110,7 @@ class MobileDatePicker extends Component {
                 `Boarding from ${from.toLocaleDateString()} to
                 ${to.toLocaleDateString()}`}{" "}
               <span className="monthCount">
-                Duration of Stay {this.props.dayCount}
+                Duration of Stay: {this.state.dayCount} Months
               </span>
             </p>
           </span>

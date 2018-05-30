@@ -87,14 +87,14 @@ class Booking extends Component {
     }
   };
 
-  calculateMonthsHandler = () => {
-    let oneDay = 24 * 60 * 60 * 1000; //hours*minutes*seconds*milliseconds
-    let fromDate = this.state.from;
-    let toDate = this.state.to;
-
-    let amountOfDays = Math.round(
-      Math.abs((fromDate.getTime() - toDate.getTime()) / oneDay)
-    );
+  calculateMonthsHandler = (from, to) => {
+    const oneDay = 1000 * 60 * 60 * 24;
+    let dateOneMS = from;
+    let dateTwoMS = to;
+    let differenceMS = dateTwoMS - dateOneMS;
+    let calculatedDayCount = Math.round(differenceMS / oneDay);
+    this.setState({ dayCount: calculatedDayCount });
+    console.log(this.state.dayCount);
   };
 
   purchaseHandler = () => {

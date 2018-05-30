@@ -30,9 +30,8 @@ class MobileBooking extends Component {
       <div className={classes.MobileBookingContainer}>
         <form onSubmit={this.props.handleSubmit(values => console.log(values))}>
           <Field
-            type="date"
-            value={this.props.numberOfMonths}
             name="mobileBookingDatePicker"
+            change={change}
             component={MobileDatePicker}
           />
           {this.renderFields()}
