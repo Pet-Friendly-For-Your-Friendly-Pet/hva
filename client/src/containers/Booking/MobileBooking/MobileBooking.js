@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { reduxForm, Field, change } from "redux-form";
 import classes from "./MobileBooking.css";
-import { connect } from "react-redux";
 
 import MobileDatePicker from "./MobileDatePicker/MobileDatePicker";
 import MobileHorseCountControl from "./MobileHorseCountControl/MobileHorseCountControl";
@@ -35,7 +34,6 @@ class MobileBooking extends Component {
             value={this.props.numberOfMonths}
             name="mobileBookingDatePicker"
             component={MobileDatePicker}
-            change={change}
           />
           {this.renderFields()}
           <button
@@ -51,8 +49,6 @@ class MobileBooking extends Component {
   }
 }
 
-export default connect(
-  reduxForm({
-    form: "mobileBookingForm"
-  })
-)(MobileBooking);
+export default reduxForm({
+  form: "mobileBookingForm"
+})(MobileBooking);

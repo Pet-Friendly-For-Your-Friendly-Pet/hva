@@ -35,7 +35,7 @@ class OrderSummary extends Component {
             <ul>
               <li>Open Arena Riding:</li>
               <li>Number of Horses:</li>
-              <li style={{ width: "70%" }}>Reservation Duration:</li>
+              <li style={{ width: "70%" }}>Duration of Stay:</li>
               <li style={{ borderBottom: "1px solid black", width: "124%" }} />
               <li style={{ fontSize: "1.2em" }}>Open Riding Total</li>
             </ul>

@@ -50,14 +50,14 @@
 }
 
 .reviewListOne ul li {
-  width: 60%;
+  width: 100%;
   margin: 0;
   padding: 3px 0;
   letter-spacing: 2px;
 }
 
 .reviewListTwo {
-  align-items: flex-end;
+  align-items: flex-start;
   text-align: left;
   font-size: 10px;
   width: 50%;
@@ -65,13 +65,14 @@
 
 .reviewListTwo ul {
   width: 100%;
+  margin-right: 0;
   padding: 0;
 }
 
 .reviewListTwo ul li {
   width: 60%;
   margin: 0;
-  padding: 8px 0 0 0;
+  padding: 3px 0;
   letter-spacing: 2px;
   text-align: right;
 }
@@ -178,7 +179,7 @@
   .reviewListTwo ul li {
     width: 60%;
     margin: 0;
-    padding: 3px 0;
+    padding: 3px 0 0 0;
     letter-spacing: 2px;
     text-align: right;
   }
