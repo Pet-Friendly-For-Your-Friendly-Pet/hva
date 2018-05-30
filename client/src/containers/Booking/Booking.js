@@ -10,12 +10,6 @@ import BookingControls from "./BookingControls/BookingControls";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import MobileBooking from "./MobileBooking/MobileBooking";
 
-const HORSE_PRICES = {
-  oneHorse: 100.0,
-  twoHorse: 150.0,
-  threeHorse: 200.0
-};
-
 class Booking extends Component {
   state = {
     boarding: false,
@@ -36,21 +30,61 @@ class Booking extends Component {
   };
 
   addHorseHandler = () => {
+    const oneHorse = 100.0;
+    const twoHorse = 150.0;
+    const threeHorse = 200.0;
     let oldCount = this.state.horseCount;
     let oldhorsePrice = this.state.horsePrice;
-    let oldBoardingTotal = this.state.boardingTotal;
     let updatedCount = oldCount + 1;
     let updatedHorsePrice;
     this.setState({ horseCount: updatedCount });
+    if (updatedCount < 1) {
+      updatedHorsePrice = 0;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
+    if (updatedCount === 1) {
+      updatedHorsePrice = oneHorse;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
+    if (updatedCount === 2) {
+      updatedHorsePrice = twoHorse;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
+    if (updatedCount === 3) {
+      updatedHorsePrice = threeHorse;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
+    if (updatedCount > 3) {
+      this.setState({ disabled: true });
+    }
   };
 
   removeHorseHandler = () => {
+    const oneHorse = 100.0;
+    const twoHorse = 150.0;
+    const threeHorse = 200.0;
     let oldCount = this.state.horseCount;
     let oldhorsePrice = this.state.horsePrice;
     let oldBoardingTotal = this.state.boardingTotal;
     let updatedCount = oldCount - 1;
     let updatedHorsePrice = this.state.horsePrice;
     this.setState({ horseCount: updatedCount });
+    if (updatedCount < 1) {
+      updatedHorsePrice = 0;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
+    if (updatedCount === 1) {
+      updatedHorsePrice = oneHorse;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
+    if (updatedCount === 2) {
+      updatedHorsePrice = twoHorse;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
+    if (updatedCount === 3) {
+      updatedHorsePrice = threeHorse;
+      this.setState({ horsePrice: updatedHorsePrice });
+    }
   };
 
   calculateMonthsHandler = () => {

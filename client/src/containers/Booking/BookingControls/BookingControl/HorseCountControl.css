@@ -176,20 +176,21 @@
     width: 50%;
   }
   .CounterControl h1 {
-    width: 75%;
+    width: 100%;
     padding: 0;
   }
   .CounterControl h1 span {
     align-items: flex-end;
-    padding-left: 27%;
+    padding-left: 24%;
     font-weight: lighter;
+    margin-right: 50px;
   }
 
   .Label {
     padding-top: 5px;
     padding-right: 10px;
     font-weight: lighter;
-    width: 100px;
+    width: 100%;
     margin-top: -28px;
   }
 
