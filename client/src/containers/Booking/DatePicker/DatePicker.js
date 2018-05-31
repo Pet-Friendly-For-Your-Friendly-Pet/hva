@@ -156,6 +156,11 @@ class DatePicker extends Component {
                 border-bottom-right-radius: 50% !important;
               }
             }
+              @media (min-width: 950px) {
+                .pricingContainer {
+                  padding: 26px 20px 45.2px 20px;
+                }
+              }
         `}</style>
         </Helmet>
       </div>
