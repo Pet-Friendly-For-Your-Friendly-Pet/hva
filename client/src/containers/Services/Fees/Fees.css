@@ -64,3 +64,10 @@
     padding: 26px 20px 67.2px 20px;
   }
 }
+
+/* HALF THE SCREEN */
+@media (min-width: 950px) {
+  .pricingContainer {
+    padding: 26px 20px 45.2px 20px;
+  }
+}

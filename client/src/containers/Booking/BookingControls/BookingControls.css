@@ -173,3 +173,20 @@
     padding-left: 14.1%;
   }
 }
+
+/* HALF THE SCREEN */
+@media (min-width: 950px) {
+  .Headers {
+    padding-top: 0;
+  }
+
+  .Header {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .HeaderTwo {
+    font-size: 20px;
+    margin: 10px 0 0 11%;
+  }
+}

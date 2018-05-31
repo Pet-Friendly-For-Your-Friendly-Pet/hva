@@ -70,3 +70,10 @@
     width: 10%;
   }
 }
+
+/* HALF THE SCREEN */
+@media (min-width: 950px) {
+  .CounterControlMonth {
+    margin: 0 0 0 16%;
+  }
+}
