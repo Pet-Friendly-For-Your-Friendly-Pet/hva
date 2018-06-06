@@ -33,11 +33,13 @@ class Booking extends Component {
     const oneHorse = 100.0;
     const twoHorse = 150.0;
     const threeHorse = 200.0;
+
     let oldCount = this.state.horseCount;
     let oldhorsePrice = this.state.horsePrice;
     let updatedCount = oldCount + 1;
     let updatedHorsePrice;
     this.setState({ horseCount: updatedCount });
+
     if (updatedCount < 1) {
       updatedHorsePrice = 0;
       this.setState({ horsePrice: updatedHorsePrice });
@@ -63,12 +65,14 @@ class Booking extends Component {
     const oneHorse = 100.0;
     const twoHorse = 150.0;
     const threeHorse = 200.0;
+
     let oldCount = this.state.horseCount;
     let oldhorsePrice = this.state.horsePrice;
     let oldBoardingTotal = this.state.boardingTotal;
     let updatedCount = oldCount - 1;
     let updatedHorsePrice = this.state.horsePrice;
     this.setState({ horseCount: updatedCount });
+
     if (updatedCount < 1) {
       updatedHorsePrice = 0;
       this.setState({ horsePrice: updatedHorsePrice });
@@ -89,12 +93,11 @@ class Booking extends Component {
 
   calculateMonthsHandler = (from, to) => {
     const oneDay = 1000 * 60 * 60 * 24;
-    let dateOneMS = from;
-    let dateTwoMS = to;
+    let dateOneMS = from.getTime();
+    let dateTwoMS = to.getTime();
     let differenceMS = dateTwoMS - dateOneMS;
     let calculatedDayCount = Math.round(differenceMS / oneDay);
     this.setState({ dayCount: calculatedDayCount });
-    console.log(this.state.dayCount);
   };
 
   purchaseHandler = () => {

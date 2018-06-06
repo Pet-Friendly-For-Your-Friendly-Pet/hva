@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Logo.css";
 
-import hillviewLogo from "../../assets/images/hillviewLogo.png";
+import hillviewLogo from "../../assets/images/LOGO_HillviewArena_BlkWht.png";
 
 const logo = props => (
   <div className={classes.Logo} style={{ height: props.height }}>
