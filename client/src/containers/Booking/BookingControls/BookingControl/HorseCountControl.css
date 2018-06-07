@@ -105,8 +105,8 @@
   .auxWrapper {
     display: inline-flex;
     text-align: left;
-    width: 50%;
-    margin-left: 8.7%;
+    margin-left: 52px;
+    width: 44%;
   }
   .BookingControl {
     width: 5%;
@@ -202,11 +202,7 @@
 
 /* HALF THE SCREEN */
 @media (min-width: 950px) {
-  .auxWrapper {
-    margin-left: 0.5%;
-  }
-
   .CounterControl {
-    padding-right: 24.5%;
+    padding-right: 29px;
   }
 }

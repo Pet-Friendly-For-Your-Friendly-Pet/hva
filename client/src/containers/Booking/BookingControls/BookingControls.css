@@ -182,11 +182,11 @@
 
   .Header {
     font-size: 20px;
-    margin: 10px 0;
+    width: 41%;
   }
 
   .HeaderTwo {
     font-size: 20px;
-    margin: 10px 0 0 11%;
+    margin: 10px 0 0 11px;
   }
 }
