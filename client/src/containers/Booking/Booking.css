@@ -17,6 +17,12 @@ button:disabled {
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .datePickerContainer {
+    padding: 5px 0px;
+  }
+}
+
 @media only screen and (min-width: 499px) {
   .Container {
     width: 100%;

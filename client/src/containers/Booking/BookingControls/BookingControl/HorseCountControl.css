@@ -199,3 +199,14 @@
     width: 10%;
   }
 }
+
+/* HALF THE SCREEN */
+@media (min-width: 950px) {
+  .auxWrapper {
+    margin-left: 0.5%;
+  }
+
+  .CounterControl {
+    padding-right: 24.5%;
+  }
+}
