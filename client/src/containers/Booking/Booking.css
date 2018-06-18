@@ -17,7 +17,7 @@ button:disabled {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .datePickerContainer {
     padding: 5px 0px;
   }
