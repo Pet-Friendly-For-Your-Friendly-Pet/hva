@@ -160,7 +160,7 @@ class Booking extends Component {
               purchasable={this.state.purchasable}
             />
           </MediaQuery>
-          <MediaQuery query="(min-width: 499px)">
+          <MediaQuery query="(min-device-width: 499px)">
             <div className={classes.datePickerContainer}>
               <DatePicker
                 monthCount={this.state.monthCount}

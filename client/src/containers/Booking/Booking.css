@@ -32,11 +32,10 @@ button:disabled {
   }
 
   .datePickerContainer {
-    padding: 5px 0px 56px 0px;
     width: 98%;
     align-content: center;
     border: 1px solid black;
-    height: 400px;
+    height: 547px;
     margin-left: 2%;
   }
 

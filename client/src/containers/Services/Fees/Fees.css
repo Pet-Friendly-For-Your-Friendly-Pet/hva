@@ -39,16 +39,13 @@
     font-size: 40px;
     font-weight: normal;
     border-bottom: 1px solid black;
-    margin: 10px;
-    padding-top: 12.5px;
-    padding-bottom: -12.5px;
+    margin: auto 10px;
+    padding: 0px;
   }
 
   .priceBox {
-    width: 75%;
-    font-size: 1em;
+    font-size: 0.8em;
     border: 1px solid black;
-    margin: 0 auto;
     text-align: start;
   }
 
@@ -58,10 +55,6 @@
 
   .priceBox hr {
     margin-top: -6px;
-  }
-
-  .pricingContainer {
-    padding: 26px 20px 67.2px 20px;
   }
 }
 
