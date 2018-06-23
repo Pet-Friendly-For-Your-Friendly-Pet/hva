@@ -8,7 +8,7 @@ import EmailIcon from "react-icons/lib/fa/envelope";
 const Footer = props => (
   <div className={classes.Footer}>
     <div className={classes.social}>
-      <a href="#top">
+      <a target="_blank" href="https://www.facebook.com/HillviewarenaLLC/">
         <FacebookIcon className={classes.facebook} />
       </a>
       <a href="#top">
