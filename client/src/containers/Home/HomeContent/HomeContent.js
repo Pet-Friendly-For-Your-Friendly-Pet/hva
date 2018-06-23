@@ -4,7 +4,9 @@ import classes from "./HomeContent.css";
 const HomeContent = props => (
   <div className={classes.container}>
     <main>
-      <h1>Bar One</h1>
+      <div className={classes.headerContainer}>
+        <h4>Hill View Arena</h4>
+      </div>
     </main>
   </div>
 );
