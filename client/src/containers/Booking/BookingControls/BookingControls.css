@@ -155,7 +155,7 @@
   .totalPriceContainer {
     text-align: left;
     width: 100%;
-    padding: 7.5% 0px 0px 0px;
+    padding: 27.1px 0px 0px 0px;
     font-size: 18px;
     letter-spacing: 12.5px;
     font-weight: lighter;
@@ -170,7 +170,7 @@
     font-size: 18px;
     font-weight: lighter;
     text-align: right;
-    padding-left: 14.1%;
+    padding-left: 45px;
   }
 }
 
@@ -182,11 +182,13 @@
 
   .Header {
     font-size: 20px;
-    width: 41%;
+    margin-left: 26px;
+    width: 50%;
   }
 
   .HeaderTwo {
     font-size: 20px;
-    margin: 10px 0 0 11px;
+    margin-left: 15px;
+    width: 50%;
   }
 }

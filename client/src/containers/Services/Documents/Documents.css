@@ -83,6 +83,23 @@ ul li {
     font-style: none;
   }
 
+  .documentsBox ul {
+    width: 100%;
+    letter-spacing: 2px;
+  }
+
+  .documentsBox ul li {
+    padding-bottom: 10px;
+  }
+
+  .documentsBox ul li:first-of-type {
+    padding-top: 0px;
+  }
+
+  .documentsBox ul li:nth-last-child(1) {
+    padding-bottom: 0;
+  }
+
   .documentsContainer {
     padding: 18px 20px 0px 20px;
   }

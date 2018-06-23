@@ -20,6 +20,7 @@
 
 .CounterControlMonth h1 {
   width: 100%;
+  margin-left: 20px;
 }
 
 .CounterControlMonth h1 span {
@@ -50,18 +51,20 @@
 
   .CounterControlMonth {
     margin: auto 0;
-    padding: 1px 0px 0px 0px;
+    padding: 0px;
     width: 100%;
     text-align: left;
+    margin-left: 20px;
   }
 
   .CounterControlMonth h1 {
     width: 100%;
+    margin-left: 0px;
   }
 
   .CounterControlMonth h1 span {
     align-items: flex-end;
-    padding-left: 11.3%;
+    padding-left: 35px;
     font-weight: lighter;
   }
 

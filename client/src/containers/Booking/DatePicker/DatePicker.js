@@ -69,6 +69,17 @@ class DatePicker extends Component {
                 letter-spacing: 5px;
               }
 
+              .DayPicker-wrapper {
+                flex-wrap: wrap;
+                position: relative;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                padding-bottom: 1rem;
+                flex-direction: row;
+              }
+
               .link {
                 color: black;
                 outline: none;
@@ -119,10 +130,11 @@ class DatePicker extends Component {
                 .RangeExample p {
                   padding: 0;
                   margin: 0;
+                  margin-left: 4.5%;
                   font-weight: inherit;
-                  text-align: center;
+                  text-align: left;
                   letter-spacing: 4px;
-                  font-size: .6em;
+                  font-size: .8em;
                 }
 
                 .link {

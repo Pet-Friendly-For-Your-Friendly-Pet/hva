@@ -105,8 +105,8 @@
   .auxWrapper {
     display: inline-flex;
     text-align: left;
-    margin-left: 52px;
-    width: 44%;
+
+    width: 50%;
   }
   .BookingControl {
     width: 5%;
@@ -142,21 +142,20 @@
 
   .BookingControl .Less {
     color: black;
-    font-size: 25px;
+    font-size: 25.5px;
     align-self: flex-start;
     display: block;
-    margin-left: -7.7px;
-    margin-top: -1px;
+    margin-left: -8.8px;
+
     margin-bottom: -1.5px;
     transition: color 0.5s ease-in-out;
   }
   .BookingControl .More {
     color: black;
-    font-size: 25px;
+    font-size: 25.5px;
     align-self: flex-start;
+    margin-left: -8.8px;
     display: block;
-    margin-left: -7.7px;
-    margin-top: -1px;
     transition: color 0.5s ease-in-out;
   }
   .BookingControl .Less:hover,
@@ -203,6 +202,7 @@
 /* HALF THE SCREEN */
 @media only screen and (min-width: 950px) {
   .CounterControl {
-    padding-right: 29px;
+    margin-left: 26px;
+    padding-right: 33px;
   }
 }

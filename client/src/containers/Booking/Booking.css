@@ -32,11 +32,13 @@ button:disabled {
   }
 
   .datePickerContainer {
-    width: 98%;
+    width: 80%;
+    -ms-flex-line-pack: center;
     align-content: center;
     border: 1px solid black;
     height: 547px;
     margin-left: 2%;
+    padding-bottom: 0px;
   }
 
   button:disabled {
