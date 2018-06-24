@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     return (
       <AuxWrapper className={classes.container}>
-        <div>
+        <div className={classes.galleryContainer}>
           <main>
             <Gallery />
           </main>
@@ -20,7 +20,7 @@ class Home extends Component {
         <div>
           <HomeContent />
         </div>
-        <footer>
+        <footer className={classes.homeFooter}>
           <Footer />
         </footer>
       </AuxWrapper>

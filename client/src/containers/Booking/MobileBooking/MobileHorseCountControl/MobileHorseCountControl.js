@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./MobileHorseCountControl.css";
 
-export default ({ input, label }) => {
+export default ({ input, label, values, onChange }) => {
   //es6 destructuring to pull out just the .input of the props
   //passing this object to the input down below to have access to the input object
   return (
@@ -13,6 +13,7 @@ export default ({ input, label }) => {
         <input
           placeholder="No more than 3"
           type="number"
+          min="0"
           style={{
             width: "100%",
             color: "black",
@@ -22,7 +23,10 @@ export default ({ input, label }) => {
             borderTop: "none",
             borderRight: "none",
             borderLeft: "none",
-            fontWeight: "lighter"
+            fontWeight: "lighter",
+            fontSize: "12px",
+            paddingTop: "9px",
+            height: "15px"
           }}
           {...input}
         />

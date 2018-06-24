@@ -17,12 +17,6 @@ button:disabled {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) {
-  .datePickerContainer {
-    padding: 5px 0px;
-  }
-}
-
 @media only screen and (min-width: 499px) {
   .Container {
     width: 100%;
@@ -43,5 +37,15 @@ button:disabled {
 
   button:disabled {
     display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-device-width: 1024px) {
+  .Container {
+    flex-flow: column;
+    flex-wrap: wrap;
+  }
+  .datePickerContainer {
+    padding: 15px 0px;
+    margin-left: 10%;
   }
 }

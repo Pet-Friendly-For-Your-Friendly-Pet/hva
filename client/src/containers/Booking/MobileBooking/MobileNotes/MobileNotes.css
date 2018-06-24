@@ -20,3 +20,8 @@ label {
   text-align: left;
   margin: 0 0 0 10px;
 }
+
+@media only screen and (min-width: 768px) and (max-device-width: 1024px) {
+  .MobileNotes .labelContainer {
+  }
+}

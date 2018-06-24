@@ -103,14 +103,16 @@ class MobileDatePicker extends Component {
               onDayChange={this.handleToChange}
             />
             <p className="InputFromTo-FromTo">
-              {!from && !to && "When will you arrive?"}
-              {from && !to && "When will you depart?"}
-              {from &&
-                to &&
-                `Boarding from ${from.toLocaleDateString()} to
+              <span>
+                {!from && !to && "When will you arrive?"}
+                {from && !to && "When will you depart?"}
+                {from &&
+                  to &&
+                  `Boarding from ${from.toLocaleDateString()} to
                 ${to.toLocaleDateString()}`}{" "}
+              </span>
               <span className="monthCount">
-                Duration of Stay: {this.state.dayCount} Months
+                Duration of Stay: <em>{this.state.dayCount} Months</em>
               </span>
             </p>
           </span>
@@ -127,6 +129,7 @@ class MobileDatePicker extends Component {
     flex-wrap: wrap;
     padding-bottom: 10px;
   }
+  
   .InputFromTo .calendarIcon {
     padding: 5px 5px 5px 5px;
     font-size: 48px;
@@ -181,6 +184,38 @@ class MobileDatePicker extends Component {
   .InputFromTo-to .DayPickerInput-Overlay {
     margin-left: -24px;
   }
+
+  @media only screen and (min-width: 768px) and (max-device-width: 1024px) {
+  .InputFromTo-to {
+    padding-right: 0px;
+  }
+
+  .InputFromTo-FromTo {
+    font-size: .9em;
+    text-align: left;
+    padding-left: 5px;
+    font-size: .8em;
+    text-align: left;
+    margin-top: 50px;
+  }
+
+  .InputFromTo-FromTo p span {
+    letter-spacing: 4px;
+  }
+
+  .monthCount {
+    letter-spacing: 3.3px;
+  }
+
+  .DayPickerInput {
+    padding: 0px;
+  }
+
+  .InputFromTo {
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+}
 `}</style>
           </Helmet>
         </div>

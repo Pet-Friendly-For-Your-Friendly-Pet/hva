@@ -26,3 +26,26 @@
 button:disabled {
   display: none;
 }
+
+@media only screen and (min-width: 768px) and (max-device-width: 1024px) {
+  .MobileSubmitButton {
+    margin-bottom: 50px;
+    opacity: 1;
+    color: black;
+    padding-bottom: 25px;
+    letter-spacing: 8px;
+    background-color: inherit;
+    -webkit-transition: color 0.3s ease-in;
+    -o-transition: color 0.3s ease-in;
+    transition: color 0.4s ease-in, letter-spacing 0.6s ease-in;
+  }
+
+  .MobileSubmitButton span {
+    vertical-align: -webkit-baseline-middle;
+  }
+
+  .MobileSubmitButton:active {
+    color: white;
+    letter-spacing: 24px;
+  }
+}

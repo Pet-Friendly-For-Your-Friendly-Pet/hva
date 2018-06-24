@@ -2,3 +2,8 @@
   display: flex;
   flex-flow: column;
 }
+
+.homeFooter {
+  width: 100%;
+  z-index: 1;
+}

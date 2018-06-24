@@ -44,6 +44,7 @@ ul li {
 @media only screen and (min-width: 499px) {
   .container {
     width: 100%;
+    padding-bottom: 450px;
   }
 
   .headerDocuments {

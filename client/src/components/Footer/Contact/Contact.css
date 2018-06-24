@@ -1,9 +1,11 @@
 .footer {
   display: flex;
+  margin-top: 5px;
 }
 
 .footer a {
   font-size: 0.8em;
+  margin-top: 5px;
   color: white;
   text-decoration: none;
 }

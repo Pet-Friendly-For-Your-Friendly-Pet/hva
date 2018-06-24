@@ -49,7 +49,7 @@
 }
 
 /* DESKTOP STYLING */
-@media screen and (min-width: 800px) {
+@media screen and (min-device-width: 320px) {
   .container {
     display: flex;
     height: 606px;

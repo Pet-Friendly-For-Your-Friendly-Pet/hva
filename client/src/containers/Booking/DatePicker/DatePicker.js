@@ -171,11 +171,48 @@ class DatePicker extends Component {
                   border-bottom-right-radius: 50% !important;
                 }
               }
+              
+              @media only screen and (min-width: 768px) and (max-device-width: 1024px) {
+                .InputFromTo-to {
+                  margin-bottom: -63.5px;
+                }
+
+                .DayPicker-Months {
+                  margin-left: 10px !important;
+                }
+
+                .InputFromTo {
+                  font-size: 16px;
+                }
+
+                .DayPickerInput {
+                  padding-bottom: 0;
+                }
+
+                .DayPickerInput input {
+                  font-size: .8em;
+
+                }
+
+                .InputFromTo-FromTo {
+                  font-size: .8em;
+                }
+
+                .DayPicker-Months {
+                  margin-left: 40px;
+                }
+
+                .RangeExample p {
+                  margin-left: 10%;
+                }
+              }
+
               @media screen and (min-width: 950px) {
                 .pricingContainer {
                   padding: 26px 20px 45.2px 20px;
                 }
               }
+
         `}</style>
         </Helmet>
       </div>

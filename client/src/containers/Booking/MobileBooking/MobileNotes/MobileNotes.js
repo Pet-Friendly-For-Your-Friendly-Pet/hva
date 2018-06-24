@@ -16,7 +16,7 @@ export default ({ input, label }) => {
           style={{
             width: "100%",
             paddingTop: "30px",
-            fontSize: ".8em",
+            fontSize: "12px",
             backgroundColor: "rgba(242, 242, 242, .2)",
             borderTop: "none",
             borderRight: "none",

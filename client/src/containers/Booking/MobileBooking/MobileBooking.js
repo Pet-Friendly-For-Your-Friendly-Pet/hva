@@ -40,7 +40,7 @@ class MobileBooking extends Component {
             type="submit"
             onClick={this.props.ordered}
           >
-            Submit
+            <span>Submit</span>
           </button>
         </form>
       </div>
