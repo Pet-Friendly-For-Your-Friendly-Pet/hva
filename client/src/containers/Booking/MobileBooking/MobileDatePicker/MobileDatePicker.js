@@ -185,9 +185,12 @@ class MobileDatePicker extends Component {
     margin-left: -24px;
   }
 
+
+
   @media only screen and (min-width: 768px) and (max-device-width: 1024px) {
   .InputFromTo-to {
     padding-right: 0px;
+    height: 100px;
   }
 
   .InputFromTo-FromTo {
@@ -211,9 +214,15 @@ class MobileDatePicker extends Component {
     padding: 0px;
   }
 
+  
+
   .InputFromTo {
     align-items: flex-start;
     padding-bottom: 0;
+  }
+  
+  .InputFromTo {
+    padding: 5px 25px 5px 5px;
   }
 }
 `}</style>

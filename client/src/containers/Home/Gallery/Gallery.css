@@ -41,7 +41,6 @@
     height: 500px;
     top: 0;
     left: 0;
-    z-index: -1;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -58,6 +57,7 @@
     box-sizing: border-box;
     margin: 0;
     flex-flow: wrap;
+    position: static;
   }
 
   .galleryContainer {
@@ -180,5 +180,41 @@ https: //css-tricks.com/the-blur-up-technique-for-loading-background-images/ */
     animation-delay: 40s;
     height: 335px;
     width: 375px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .container {
+    height: 400px;
+    z-index: 0;
+  }
+
+  .galleryContainer li:nth-child(1) {
+    background-image: url(https://i.pinimg.com/originals/e6/81/dd/e681ddd27d3329e31d135a92e428ecb5.jpg);
+    height: 512px;
+  }
+
+  .galleryContainer li:nth-child(2) {
+    background-image: url(https://i1.wallbox.ru/wallpapers/main/201601/962d468894d92b3.jpg);
+    animation-delay: 10s;
+    height: 512px;
+  }
+
+  .galleryContainer li:nth-child(3) {
+    background-image: url(http://hddesktopwallpapers.in/wp-content/uploads/2015/07/horse-wallpapers-nice.jpg);
+    animation-delay: 20s;
+    height: 512px;
+  }
+
+  .galleryContainer li:nth-child(4) {
+    background-image: url(http://hdwallpaperfun.com/wp-content/uploads/2015/08/caballos-arabe-galopando.jpg);
+    animation-delay: 30s;
+    height: 512px;
+  }
+
+  .galleryContainer li:nth-child(5) {
+    background-image: url(https://hdwallsource.com/img/2017/6/horse-kiss-hd-wallpaper-59331-61116-hd-wallpapers.jpg);
+    animation-delay: 40s;
+    height: 512px;
   }
 }
