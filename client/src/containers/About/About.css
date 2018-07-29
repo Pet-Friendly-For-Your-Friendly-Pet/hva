@@ -4,7 +4,6 @@
   width: 100%;
   top: 0;
   left: 0;
-  justify-content: center;
   padding: 0;
   margin: 0;
 }
@@ -16,10 +15,81 @@
 }
 
 .contentContainer {
-  margin: 1% 5%;
+  margin: 10%;
+  max-width: 1280px;
 }
 
 .header {
   width: 100%;
-  text-align: center;
+  text-align: left;
+}
+
+.sections {
+  flex-direction: column;
+  max-width: 1280px;
+}
+
+.sections section p {
+  font-size: 14px;
+}
+
+.sectionOne {
+  border-bottom: 1px solid black;
+  padding: 2px 5px;
+  background-color: white;
+}
+
+.sectionTwo {
+  position: fixed;
+  display: contents;
+}
+
+.sectionImageFull {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-clip-path: polygon(
+    0 0px,
+    3666px -550px,
+    -665px 7px,
+    454px 656px,
+    -8336px 62px
+  );
+  clip-path: polygon(
+    0 0px,
+    3666px -550px,
+    -665px 7px,
+    454px 656px,
+    -8336px 62px
+  );
+  position: fixed;
+  top: -140px;
+  margin: 1px -20px;
+  left: 20px;
+  z-index: -1;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(0, 0, 0, 0)),
+    to(rgba(0, 0, 0, 1))
+  );
+  mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-shape-outside: polygon(nonzero, 0 0, 0 100%, 100% 100%);
+  /* shape-outside: polygon(nonzero, 0 0, 0 100%, 100% 100%); */
+
+  background-blend-mode: multiply;
 }

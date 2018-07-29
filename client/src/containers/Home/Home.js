@@ -17,7 +17,7 @@ class Home extends Component {
             <Gallery />
           </main>
         </div>
-        <div>
+        <div className={classes.contentContainer}>
           <HomeContent />
         </div>
         <footer className={classes.homeFooter}>

@@ -34,66 +34,6 @@
   width: 100%;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .galleryContainer {
-    max-width: 100%;
-    max-height: 100%;
-    height: 500px;
-    top: 0;
-    left: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-/* DESKTOP STYLING */
-@media screen and (min-device-width: 320px) {
-  .container {
-    display: flex;
-    height: 606px;
-    width: 100%;
-    z-index: -1;
-    box-sizing: border-box;
-    margin: 0;
-    flex-flow: wrap;
-    position: static;
-  }
-
-  .galleryContainer {
-    max-width: 100%;
-    max-height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-  }
-
-  .galleryContainer li {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    opacity: 0;
-    z-index: 0;
-    animation: imageAnimation 50s linear infinite;
-  }
-
-  .galleryContainer li img {
-    flex: 1;
-    height: 100%;
-    width: 100%;
-  }
-}
-
 /*ANIMATIONS AND IMAGE PLACEMENT*/
 .galleryContainer li:nth-child(1) {
   background-image: url(https://i.pinimg.com/originals/e6/81/dd/e681ddd27d3329e31d135a92e428ecb5.jpg);
@@ -144,8 +84,13 @@
 https: //css-tricks.com/the-blur-up-technique-for-loading-background-images/ */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
-    height: 241.9px;
+    height: 290px;
     z-index: -1;
+  }
+
+  .galleryContainer {
+    position: fixed;
+    flex: 1 1;
   }
 
   .galleryContainer li:nth-child(1) {
@@ -185,8 +130,12 @@ https: //css-tricks.com/the-blur-up-technique-for-loading-background-images/ */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .container {
-    height: 400px;
-    z-index: 0;
+    z-index: -1;
+  }
+
+  .galleryContainer {
+    z-index: -1;
+    height: 450px;
   }
 
   .galleryContainer li:nth-child(1) {
@@ -216,5 +165,51 @@ https: //css-tricks.com/the-blur-up-technique-for-loading-background-images/ */
     background-image: url(https://hdwallsource.com/img/2017/6/horse-kiss-hd-wallpaper-59331-61116-hd-wallpapers.jpg);
     animation-delay: 40s;
     height: 512px;
+  }
+}
+
+/* DESKTOP STYLING */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .container {
+    display: flex;
+    height: 608px;
+    width: 100%;
+    z-index: -1;
+    box-sizing: border-box;
+    margin: 0;
+    position: sticky;
+  }
+
+  .galleryContainer {
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+  }
+
+  .galleryContainer li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+  }
+
+  .galleryContainer li img {
+    flex: 1;
+    height: 100%;
+    width: 100%;
   }
 }

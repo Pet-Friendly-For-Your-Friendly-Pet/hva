@@ -5,17 +5,19 @@ import Circle from "./Circle/Circle";
 
 const HomeContent = props => (
   <div className={classes.container}>
+    <header>
+      <h4>Hill View Arena</h4>
+    </header>
     <main>
-      <div className={classes.headerContainer}>
-        <h4>Hill View Arena</h4>
-      </div>
-      <div className={classes.servicesRendered}>
-        <ul>
-          <Circle />
-          <Circle />
-          <Circle />
-        </ul>
-      </div>
+      <section className={classes.servicesRendered}>
+        <div>
+          <ul>
+            <Circle />
+            <Circle />
+            <Circle />
+          </ul>
+        </div>
+      </section>
     </main>
   </div>
 );

@@ -33,6 +33,7 @@ button:disabled {
     height: 547px;
     margin-left: 2%;
     padding-bottom: 0px;
+    margin-top: 55px;
   }
 
   button:disabled {
